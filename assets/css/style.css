@@ -4566,9 +4566,8 @@ img {
 }
 
 section.content {
-  margin: 140px 15px 0 240px;
+  margin: 140px 265px 0 10px;
   /*276*/
-  /* margin: 60px 15px 0 276px; */
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -13614,7 +13613,7 @@ fieldset[disabled] .form-control {
   /*5s*/
   font-family: "Poppins", sans-serif;
   background: #ffffff;
-  width: 230px;
+  width: 260px;
   /* 260, 245*/
   /*overflow: hidden;*/
   overflow: scroll;
@@ -13748,7 +13747,7 @@ fieldset[disabled] .form-control {
 
 .sidebar .menu .list i.menu-icon {
   font-size: 16px;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .sidebar .menu .list .tooltips .sidebarQuickIcon {
@@ -13764,7 +13763,7 @@ fieldset[disabled] .form-control {
 .sidebar .menu .list .menu-toggle:before {
   position: absolute;
   top: calc(50% - 6px);
-  right: 6px;
+  left: 6px;
   /*12*/
   font-size: 16px;
   -moz-transform: scale(0);
@@ -13851,7 +13850,7 @@ fieldset[disabled] .form-control {
 }
 
 .sidebar .menu .list a span {
-  margin: 7px 0 7px 12px;
+  margin: 7px 16px 7px 12px;
   color: #111;
   font-size: 13px;
   overflow: hidden;
@@ -15495,7 +15494,7 @@ nav.navbar {
 }
 
 .side-closed section.content {
-  margin-left: 65px;
+  margin-right: 65px;
 }
 
 .side-closed .navbar-brand {
@@ -15516,7 +15515,7 @@ nav.navbar {
 
 .side-closed.side-closed-hover .sidebar .menu .list li span {
   display: block;
-  float: left;
+  float: right;
 }
 
 .side-closed.side-closed-hover .sidebar .menu .list li a {
@@ -15524,7 +15523,7 @@ nav.navbar {
 }
 
 .side-closed.side-closed-hover .sidebar .menu .list li i {
-  float: left;
+  float: right;
   line-height: 2rem;
 }
 
@@ -15536,7 +15535,7 @@ nav.navbar {
 }
 
 .side-closed.side-closed-hover section.content {
-  margin-left: 276px;
+  margin-right: 265px;
 }
 
 .sidemenu-collapse:hover {
