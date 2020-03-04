@@ -88,7 +88,7 @@
   cursor: pointer;
 }
 .select2-container--open .select2-dropdown {
-  left: 0;
+  left: 12px;
 }
 .select2-container--open .select2-dropdown--above {
   border-bottom: none;
@@ -99,6 +99,7 @@
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  width: 277px !important;
 }
 .select2-search--dropdown {
   display: block;
