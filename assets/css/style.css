@@ -14610,7 +14610,7 @@ span.notify {
   height: 5px;
   position: absolute;
   top: 8px;
-  right: 7px;
+  left: 7px;
   border-radius: 50%;
   background-color: #3a6596;
 }
@@ -14618,7 +14618,7 @@ span.notify {
 .heartbeat {
   position: absolute;
   top: -2px;
-  right: -3px;
+  left: -3px;
   height: 25px;
   width: 25px;
   z-index: 10;
@@ -23587,4 +23587,14 @@ html.ie11 .bs-searchbox .form-control {
   height: 20px;
   border-radius: 50%;
   background: #ccc;
+}
+
+.page-header {
+  background-color: #3a6596;
+}
+
+.page-title {
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
 }

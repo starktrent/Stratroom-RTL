@@ -15525,7 +15525,7 @@ a.close.disabled {
 
 .modal-header .close {
   padding: 1rem 1rem;
-  margin: -1rem -1rem -1rem auto;
+  margin: -10px -1rem -1rem 0px;
 }
 
 .modal-title {
