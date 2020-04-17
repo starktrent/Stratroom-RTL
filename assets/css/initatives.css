@@ -495,12 +495,13 @@ a.nav-link {
 
 .header .create_initives .sub_initiative {
   display: flex;
-  padding: 0 23px 0 0;
+  padding: 4px 0 0px 26px;
 }
 
 .sub_initiatives .card .header .header-dropdown {
   position: absolute;
-  top: 12px;
+  top: 16px;
+  left: 6px;
   right: 5px;
   list-style: none;
 }
@@ -942,7 +943,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .sub_initiatives .header {
   /* background: #efedec !important; */
-  background: #3a6596 !important;
+  background: #525252 !important;
   border-top-left-radius: 5px !important;
   border-top-right-radius: 5px !important;
   color: #fff !important;

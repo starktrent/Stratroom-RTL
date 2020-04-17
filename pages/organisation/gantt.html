@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<a lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>StratRoom</title>
+    <!-- Favicon-->
+    <!-- <link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon"> -->
+    <!-- Plugins Core Css -->
+    <link href="../../assets/css/app.min.css" rel="stylesheet" />
+    <!-- Custom Css -->
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <link href="../../assets/css/custom.css" rel="stylesheet" />
+    <link href="../../assets/css/initatives.css" rel="stylesheet" />
+    <link href="../../assets/css/startroom/wedgets.css" rel="stylesheet" />
+    <link href="../../assets/css/employee.css" rel="stylesheet" />
+    <!-- You can choose a theme from css/styles instead of get all themes -->
+    <link href="../../assets/css/styles/all-themes.css" rel="stylesheet" />
+    <link href="../../assets/css/icheck-bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/datepickerair.css" />
+    <link href="../../assets/jquery-ui.min.css" rel="stylesheet" />
+    <link
+      href="../../assets/daterangepicker/daterangepicker.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Tree Table -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../assets/treeable/jquery.treetable.css" />
+    <link
+      rel="stylesheet"
+      href="../../assets/treeable/jquery.treetable.theme.default.css"
+    />
+
+    <!-- Frappe Gantt Chart -->
+    <script src="../../assets/Gantt/frappe-gantt.min.js"></script>
+    <link rel="stylesheet" href="../../assets/Gantt/frappe-gantt.css" />
+
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <style>
+    .table-responsive {
+      margin-top: -4px;
+    }
+
+    .table thead tr th {
+      padding: 23px 10px;
+    }
+
+    .dashboard-table tbody tr td {
+      padding: 6px 5px;
+    }
+  </style>
+
+  <body class="light">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+      <div class="loader">
+        <div class="m-t-30">
+          <img width="100" src="../../assets/images/logo_1.gif" alt="admin" />
+        </div>
+        <p>Please wait...</p>
+      </div>
+    </div>
+    <!-- <div>
+            <img src="../../assets/images/SP_Bg.png" alt="">
+        </div> -->
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a
+            href="#"
+            onClick="return false;"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+            aria-expanded="false"
+          ></a>
+          <a href="#" onClick="return false;" class="bars"></a>
+          <a href="#" onClick="return false;" class="bar_nav sidemenu-collapse"
+            ><i class="nav-hdr-btn ti-menu" style="color: #000;"></i
+          ></a>
+          <a class="navbar-brand nav_float" href="#">
+            <img
+              src="../../assets/images/Startroom_Final logo-01_1.png"
+              alt=""
+            />
+            <!-- <span class="logo-name">Img</span> -->
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="fullscreen" style="padding: 4px; left: -14px;">
+              <ul class="list-unstyled order-list">
+                <li class="avatar avatar-sm">
+                  <img
+                    class="rounded-circle"
+                    src="../../assets/images/user/user7.jpg"
+                    alt="user"
+                  />
+                </li>
+                <li class="avatar avatar-sm">
+                  <img
+                    class="rounded-circle"
+                    src="../../assets/images/user/user8.jpg"
+                    alt="user"
+                  />
+                </li>
+                <li class="avatar avatar-sm">
+                  <img
+                    class="rounded-circle"
+                    src="../../assets/images/user/user9.jpg"
+                    alt="user"
+                  />
+                </li>
+                <li class="avatar avatar-sm">
+                  <img
+                    class="rounded-circle"
+                    src="../../assets/images/user/user9.jpg"
+                    alt="user"
+                  />
+                </li>
+                <li _ngcontent-hhc-c5="" class="avatar avatar-sm">
+                  <span _ngcontent-hhc-c5="" class="badge">+3</span>
+                </li>
+              </ul>
+            </li>
+            <li class="fullscreen">
+              <form class="form-header" action="" method="POST">
+                <input
+                  class="au-input au-input--xl"
+                  style="min-width: 20%;"
+                  type="text"
+                  name="search"
+                  placeholder="Search"
+                />
+                <button class="au-btn--submit" type="submit">
+                  <i class="fa fa-search" style="color: gray;"></i>
+                </button>
+              </form>
+            </li>
+            <li class="fullscreen">
+              <!-- <i class="nav-hdr-btn ti-calendar" style="color: gray"></i> -->
+              <input class="daterangepicker-field top_datepicker" />
+            </li>
+            <!-- #END# Full Screen Button -->
+            <!-- #START# Notifications-->
+            <li class="dropdown">
+              <a
+                href="#"
+                onClick="return false;"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+              >
+                <i class="nav-hdr-btn ti-bell" style="color: gray;"></i>
+                <span class="notify"></span>
+                <span class="heartbeat"></span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a
+                href="#"
+                onClick="return false;"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+              >
+                <i class="nav-hdr-btn ti-settings" style="color: gray;"></i>
+                <span class="notify"></span>
+                <span class="heartbeat"></span>
+              </a>
+            </li>
+            <!-- #END# Notifications-->
+            <li class="">
+              <a
+                href="#"
+                onclick="return false;"
+                class="dropdown-toggle js-right-sidebar"
+                data-close="true"
+              >
+                <!-- <img src="../../assets/images/user.jpg" alt="user"> -->
+                <i class="fas fa-user-circle"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- #Top Bar -->
+
+    <div>
+      <!-- Left Sidebar -->
+      <aside id="leftsidebar" class="sidebar">
+        <!-- Menu -->
+        <div class="menu">
+          <ul class="list">
+            <li class="active">
+              <a href="#" onClick="return false;" class="">
+                <i class="menu-icon fa fa-home font_icon"></i>
+                <span>Organisation Structure</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" onClick="return false;" class="menu-toggle">
+                <i class="menu-icon fa fa-dashboard font_icon"></i>
+                <span>Dashboards</span>
+              </a>
+              <ul class="ml-menu">
+                <li>
+                  <a href="#">BSC Dashboard</a>
+                </li>
+                <li>
+                  <a href="#">Strategy Map</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="">
+              <a href="#" onClick="return false;" class="">
+                <i class="menu-icon fa fa-bar-chart font_icon"></i>
+                <span>Charts</span>
+              </a>
+            </li>
+
+            <li class="">
+              <a href="#" onClick="return false;" class="">
+                <i class="menu-icon fa fa-key font_icon"></i>
+                <span>Users & Access</span>
+              </a>
+            </li>
+
+            <li class="">
+              <a href="#" onClick="return false;" class="">
+                <i class="menu-icon fa fa-sitemap font_icon"></i>
+                <span>Workflows</span>
+              </a>
+            </li>
+
+            <li class="">
+              <a href="#" onClick="return false;" class="">
+                <i class="menu-icon fa fa-bell font_icon"></i>
+                <span>Notifications & Alerts</span>
+              </a>
+            </li>
+
+            <li class="">
+              <a href="#" onClick="return false;" class="">
+                <i class="menu-icon fa fa-database font_icon"></i>
+                <span>Data Management</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" onClick="return false;" class="menu-toggle">
+                <i class="menu-icon fa fa-laptop font_icon"></i>
+                <span>Template Management</span>
+              </a>
+              <ul class="ml-menu">
+                <li>
+                  <a
+                    href="#"
+                    id="sub-menu"
+                    onClick="return false;"
+                    class="menu-toggle"
+                  >
+                    Scorecard Layouts
+                  </a>
+                  <ul class="ml-menu">
+                    <li><a href="#">Standard BSC View</a></li>
+                    <li><a href="#">Dashboard View</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    id="sub-menu"
+                    onClick="return false;"
+                    class="menu-toggle"
+                  >
+                    Initiative
+                  </a>
+                  <ul class="ml-menu">
+                    <li><a href="#">Sub Initiatives</a></li>
+                    <li><a href="#">Tasks</a></li>
+                    <li><a href="#">Activities</a></li>
+                    <li><a href="#">Milestones</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Reports Table</a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    id="sub-menu"
+                    onClick="return false;"
+                    class="menu-toggle"
+                  >
+                    Comments
+                  </a>
+                  <ul class="ml-menu">
+                    <li><a href="#">Comments & Observations</a></li>
+                    <li><a href="#">Proof of Evidence</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Employee Layout</a>
+                </li>
+                <li>
+                  <a href="#">Appraisal</a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    data-toggle="modal"
+                    data-target=".data_collection_form"
+                    >Data Collection Form</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="">
+              <a href="#" onClick="return false;" class="">
+                <i class="menu-icon fa fa-columns font_icon"></i>
+                <span>Widget Management</span>
+              </a>
+            </li>
+
+            <li class="">
+              <a href="#" onClick="return false;" class="">
+                <i class="menu-icon fa fa-pie-chart font_icon"></i>
+                <span>Reports</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- #Menu -->
+      </aside>
+    </div>
+    <!-- #END# Left Sidebar -->
+
+    <!-- Create Budget Modal -->
+    <div id="create_task" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" style="margin-top: 3%;">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Add New Task</h4>
+            <button type="button" class="close pull-right" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="form-group col-md-2">
+                <label for="">Task ID</label>
+                <input type="text" class="modal-custom-input" placeholder="" />
+              </div>
+
+              <div class="form-group col-md-10">
+                <label for="">Task Name</label>
+                <input type="text" class="modal-custom-input" placeholder="" />
+              </div>
+
+              <div class="form-group col-md-12">
+                <hr />
+              </div>
+
+              <div class="form-group col-md-12">
+                <label for="">Task Description</label>
+                <textarea
+                  class="modal-custom-textarea"
+                  placeholder=""
+                  rows="6"
+                ></textarea>
+              </div>
+
+              <div class="form-group col-md-12">
+                <hr />
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="kpi_owner">Owner</label>
+                <select
+                  id="owner"
+                  name=""
+                  class="select_all"
+                  multiple
+                  style="display: none !important;"
+                >
+                  <option value="1">Gary Richards</option>
+                  <option value="2">Nicholas Marshall</option>
+                  <option value="3">Linda Alvarez</option>
+                  <option value="3">Megan Lewis</option>
+                  <option value="3">Bobby Bowman</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="impact">Impact</label>
+                <select
+                  id="impact"
+                  name=""
+                  class="select_all"
+                  multiple
+                  style="display: none !important;"
+                >
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-12">
+                <hr />
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="kpi_name">Budget</label>
+                <input type="text" class="modal-custom-input" />
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="kpi_start_end_date"
+                  >Planned Start Date/End Date</label
+                >
+                <input
+                  type="text"
+                  class="modal-custom-input date_pickers datepicker-here"
+                  data-range="true"
+                  data-multiple-dates-separator=" - "
+                  data-language="en"
+                  id="air-date-sub-init"
+                />
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="kpi_start_end_date"
+                  >Actual Start Date/End Date</label
+                >
+                <input
+                  type="text"
+                  class="modal-custom-input date_pickers datepicker-here"
+                  data-range="true"
+                  data-multiple-dates-separator=" - "
+                  data-language="en"
+                  id="air-date-sub-init"
+                />
+              </div>
+
+              <div class="form-group col-md-12">
+                <hr />
+              </div>
+
+              <div class="form-group col-md-12">
+                <label for="">Status</label>
+              </div>
+              <div class="form-group col-md-4">
+                <div class="radio icheck-success">
+                  <input type="radio" id="primary1" checked name="primary" />
+                  <label for="primary1"></label>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <div class="radio icheck-warning">
+                  <input type="radio" id="primary2" name="primary" />
+                  <label for="primary2"></label>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <div class="radio icheck-danger">
+                  <input type="radio" id="primary3" name="primary" />
+                  <label for="primary3"></label>
+                </div>
+              </div>
+
+              <div class="form-group col-md-12">
+                <hr />
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="budget_type">Status</label>
+                <select id="budget_type" name="" class="modal-custom-select">
+                  <option>Choose</option>
+                  <option value="manual">Manual</option>
+                  <option value="weighted">Weighted</option>
+                  <option value="first">First</option>
+                  <option value="second">Second</option>
+                  <option value="third">Third</option>
+                  <option value="fourth">Fourth</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="kpi_name">Progress (%)</label>
+                <input
+                  type="number"
+                  min="0"
+                  class="modal-custom-input"
+                  name="kpi_name"
+                  id="kpi_name"
+                  placeholder=""
+                />
+              </div>
+
+              <div class="form-group col-md-12">
+                <hr />
+              </div>
+
+              <div class="form-group col-md-12">
+                <label for="kpi_fields" class="ml-2 mr-3">Amount</label>
+                <ul class="d-flex flex-row flex-wrap ml-2">
+                  <li>
+                    <div class="form-check">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                          />
+                          Budget
+                          <span class="form-check-sign">
+                            <span class="check"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                          />
+                          Utillized
+                          <span class="form-check-sign">
+                            <span class="check"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                          />
+                          Balance
+                          <span class="form-check-sign">
+                            <span class="check"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="form-group col-md-12">
+                <hr />
+              </div>
+
+              <div class="form-group col-lg-8 col-md-4 col-sm-12"></div>
+              <div class="form-group col-lg-2 col-md-4 col-sm-6">
+                <button
+                  type="button"
+                  class="btn custom-form-control btn-custom-secondary"
+                  data-dismiss="modal"
+                >
+                  <i class="fas fa-ban"></i> Close
+                </button>
+              </div>
+              <div class="form-group col-lg-2 col-md-4 col-sm-6">
+                <button
+                  type="button"
+                  class="btn custom-form-control btn-custom-primary"
+                >
+                  <i class="fas fa-check"></i> Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Start -->
+    <section class="content">
+      <!-- Page Header -->
+      <div class="page-header row no-gutters py-2 m-t--70">
+        <div class="col-lg-6 col-md-6 text-center text-sm-left pt-2 mb-0 ml-4">
+          <h5
+            class="page-title"
+            style="font-weight: 600; text-transform: uppercase;"
+          >
+            Gantt Chart
+          </h5>
+        </div>
+      </div>
+      <!-- End Page Header -->
+
+      <!-- Page Body -->
+      <div class="container-fluid">
+        <!-- COl -->
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="card">
+              <div class="form-row" style="padding: 16px;">
+                <div class="col-md-2 form-group">
+                  <button
+                    onclick="menuToggle()"
+                    class="btn btn-custom-secondary"
+                    data-toggle="tooltip"
+                    data-placement="right"
+                    title="Collapse Table"
+                  >
+                    <i id="toggleIcon" class="fa fa-angle-double-left"></i>
+                  </button>
+                </div>
+                <div class="col-md-8"></div>
+                <div class="col-md-2 custom-space-even">
+                  <div
+                    id="control-view"
+                    class="btn-group"
+                    role="group"
+                    aria-label="Basic example"
+                    style="width: 80%;"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-custom-secondary active"
+                      data-value="Day"
+                      style="
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                      "
+                    >
+                      D
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-custom-secondary"
+                      data-value="Week"
+                    >
+                      W
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-custom-secondary"
+                      data-value="Month"
+                      style="
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                      "
+                    >
+                      M
+                    </button>
+                  </div>
+                  <button
+                    class="btn btn-custom-secondary"
+                    data-toggle="modal"
+                    data-target="#create_task"
+                  >
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="form-row" style="padding: 16px; margin-top: -20px;">
+                <div class="col-md-4" id="TreeTable">
+                  <div class="table-responsive">
+                    <table
+                      id="example-basic"
+                      class="table align-center dashboard-table dashboard-task-infos"
+                    >
+                      <thead>
+                        <tr>
+                          <th>Task Name</th>
+                          <th>Start Date</th>
+                          <th>End Date</th>
+                          <th>Owner</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr data-tt-id="1">
+                          <td>Redesign website</td>
+                          <td>Oct 1</td>
+                          <td>Oct 15</td>
+                          <td>
+                            <img
+                              src="https://uinames.com/api/photos/female/12.jpg"
+                              width="35px"
+                              height="35px"
+                              style="border-radius: 50%;"
+                              alt="Owner"
+                            />
+                          </td>
+                        </tr>
+                        <tr data-tt-id="1.1" data-tt-parent-id="1">
+                          <td>Write new content</td>
+                          <td>Oct 3</td>
+                          <td>Oct 10</td>
+                          <td>
+                            <img
+                              src="https://uinames.com/api/photos/female/22.jpg"
+                              width="35px"
+                              height="35px"
+                              style="border-radius: 50%;"
+                              alt="Owner"
+                            />
+                          </td>
+                        </tr>
+                        <tr data-tt-id="2.1" data-tt-parent-id="1.1">
+                          <td>Apply new styles</td>
+                          <td>Oct 4</td>
+                          <td>Oct 12</td>
+                          <td>
+                            <img
+                              src="https://uinames.com/api/photos/male/7.jpg"
+                              width="35px"
+                              height="35px"
+                              style="border-radius: 50%;"
+                              alt="Owner"
+                            />
+                          </td>
+                        </tr>
+                        <tr data-tt-id="3.1" data-tt-parent-id="2.1">
+                          <td>Review</td>
+                          <td>Oct 8</td>
+                          <td>Oct 13</td>
+                          <td>
+                            <img
+                              src="https://uinames.com/api/photos/male/16.jpg"
+                              width="35px"
+                              height="35px"
+                              style="border-radius: 50%;"
+                              alt="Owner"
+                            />
+                          </td>
+                        </tr>
+                        <tr data-tt-id="3.2" data-tt-parent-id="2.1">
+                          <td>Deploy</td>
+                          <td>Oct 8</td>
+                          <td>Oct 14</td>
+                          <td>
+                            <img
+                              src="https://uinames.com/api/photos/female/21.jpg"
+                              width="35px"
+                              height="35px"
+                              style="border-radius: 50%;"
+                              alt="Owner"
+                            />
+                          </td>
+                        </tr>
+                        <tr data-tt-id="4.1" data-tt-parent-id="3.2">
+                          <td>Go Live!</td>
+                          <td>Oct 11</td>
+                          <td>Oct 15</td>
+                          <td>
+                            <img
+                              src="https://uinames.com/api/photos/male/20.jpg"
+                              width="35px"
+                              height="35px"
+                              style="border-radius: 50%;"
+                              alt="Owner"
+                            />
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div
+                  class="col-md-8"
+                  id="FrappeGantt"
+                  style="border: 2px solid #e0e0e0;"
+                >
+                  <svg id="gantt" style="height: 360px;"></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Page Body -->
+    </section>
+    <!-- Content Start -->
+
+    <!-- Plugins Js -->
+    <script src="../../assets/js/app.min.js"></script>
+    <!-- Custom Js -->
+    <script src="../../assets/js/admin.js"></script>
+    <!-- Knob Js -->
+    <script src="../../assets/jquery-ui.min.js"></script>
+    <script src="../../assets/moment.js"></script>
+    <script src="../../assets/js/pages/core.js"></script>
+    <script src="../../assets/jquery.editable.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/pickr.es5.min.js"></script>
+    <script src="../../assets/datepickerair.js"></script>
+    <script src="../../assets/datepicker.en.js"></script>
+    <script src="../../assets/js/widgets.js"></script>
+    <script src="../../assets/js/pages/widgets/chart-widget.js"></script>
+    <script src="../../assets/knockout-3.5.0.js"></script>
+    <script src="../../assets/daterangepicker/daterangepicker.min.js"></script>
+
+    <script src="../../assets/treeable/jquery.treetable.js"></script>
+    <script>
+      $(".daterangepicker-field").daterangepicker({
+        forceUpdate: true,
+        callback: function (startDate, endDate, period) {
+          var title = startDate.format("L") + " – " + endDate.format("L");
+          $(this).val(title);
+        },
+      });
+
+      $(document).ready(function () {
+        // $('select').val([1]);
+        $("#impact, #owner").formSelect();
+        $("select.select_all")
+          .siblings("ul")
+          .prepend("<li id=sm_select_all><span>Select All</span></li>");
+        $("li#sm_select_all").on("click", function () {
+          var jq_elem = $(this),
+            jq_elem_span = jq_elem.find("span"),
+            select_all = jq_elem_span.text() == "Select All",
+            set_text = select_all ? "Select None" : "Select All";
+          jq_elem_span.text(set_text);
+          jq_elem
+            .siblings("li")
+            .filter(function () {
+              return $(this).find("input").prop("checked") != select_all;
+            })
+            .click();
+        });
+      });
+    </script>
+    <script>
+      function menuToggle() {
+        var t = document.getElementById("TreeTable");
+        var g = document.getElementById("FrappeGantt");
+
+        if (!t.hidden) {
+          t.hidden = true;
+          g.setAttribute("class", "col-md-12");
+        } else {
+          t.hidden = false;
+          g.setAttribute("class", "col-md-8");
+        }
+      }
+    </script>
+    <script>
+      var tasks = [
+        {
+          start: "2018-10-01",
+          end: "2018-10-15",
+          name: "Redesign website",
+          id: "Task 0",
+          owner: "https://uinames.com/api/photos/female/12.jpg",
+          progress: 60,
+          budget: "$ 5,00,000",
+          utillized: "$ 2,00,000",
+          balance: "$ 3,00,000",
+        },
+        {
+          start: "2018-10-03",
+          end: "2018-10-10",
+          name: "Write new content",
+          id: "Task 1",
+          owner: "https://uinames.com/api/photos/female/22.jpg",
+          progress: 20,
+          budget: "$ 5,00,000",
+          utillized: "$ 2,00,000",
+          balance: "$ 3,00,000",
+          dependencies: "Task 0",
+        },
+        {
+          start: "2018-10-04",
+          end: "2018-10-12",
+          name: "Apply new styles",
+          id: "Task 2",
+          owner: "https://uinames.com/api/photos/male/7.jpg",
+          progress: 30,
+          budget: "$ 5,00,000",
+          utillized: "$ 2,00,000",
+          balance: "$ 3,00,000",
+          dependencies: "Task 1",
+        },
+        {
+          start: "2018-10-08",
+          end: "2018-10-13",
+          name: "Review",
+          id: "Task 3",
+          owner: "https://uinames.com/api/photos/male/16.jpg",
+          progress: 35,
+          budget: "$ 5,00,000",
+          utillized: "$ 2,00,000",
+          balance: "$ 3,00,000",
+          dependencies: "Task 2",
+        },
+        {
+          start: "2018-10-08",
+          end: "2018-10-14",
+          name: "Deploy",
+          id: "Task 4",
+          owner: "https://uinames.com/api/photos/female/21.jpg",
+          progress: 20,
+          budget: "$ 5,00,000",
+          utillized: "$ 2,00,000",
+          balance: "$ 3,00,000",
+          dependencies: "Task 2",
+        },
+        {
+          start: "2018-10-11",
+          end: "2018-10-15",
+          name: "Go Live!",
+          id: "Task 5",
+          owner: "https://uinames.com/api/photos/male/20.jpg",
+          progress: 10,
+          budget: "$ 5,00,000",
+          utillized: "$ 2,00,000",
+          balance: "$ 3,00,000",
+          dependencies: "Task 4",
+          custom_class: "bar-milestone",
+        },
+      ];
+
+      var gantt = new Gantt("#gantt", tasks, {
+        header_height: 50,
+        column_width: 30,
+        step: 24,
+        view_modes: ["Quarter Day", "Half Day", "Day", "Week", "Month"],
+        bar_height: 30,
+        bar_corner_radius: 3,
+        arrow_curve: 5,
+        padding: 18,
+        view_mode: "Day",
+        date_format: "YYYY-MM-DD",
+        custom_popup_html: function (task) {
+          return `<div class="details-container">
+            <div class="row">
+              <div class="col-8 gantt-popup-heading">
+                <h5>${task.name}</h5>
+              </div>
+              <div class="col-4">
+                <img src="${task.owner}" alt="owner">
+              </div>
+              <hr />
+            </div>
+            <div class="row gantt-popup-body">
+              <div class="col-6">
+                <span>Budget</span>
+                <span class="pull-right"> - </span>
+              </div>
+              <div class="col-6">
+                <p>${task.budget}</p>
+              </div>
+              <div class="col-6">
+                <span>Utillized</span>
+                <span class="pull-right"> - </span>
+              </div>
+              <div class="col-6">
+                <p>${task.utillized}</p>
+              </div>
+              <div class="col-6">
+                <span>Balance</span>
+                <span class="pull-right"> - </span>
+              </div>
+              <div class="col-6">
+                <p>${task.balance}</p>
+              </div>
+              <div class="col-12" style="margin-top: 8px;">
+                <p>${task.progress}% completed!</p>
+              </div>
+            </div>
+        </div>`;
+        },
+      });
+
+      $("#control-view").on("click", "button", function (e) {
+        var mode = this.dataset.value;
+        gantt.change_view_mode(mode);
+        $(this).parent().find("button").removeClass("active");
+        $(this).addClass("active");
+      });
+    </script>
+
+    <script>
+      $("#example-basic").treetable({ expandable: true });
+
+      $("#example-basic-static").treetable();
+
+      $("#example-basic-expandable").treetable({ expandable: true });
+
+      $("#example-advanced").treetable({ expandable: true });
+    </script>
+  </body>
+</a>

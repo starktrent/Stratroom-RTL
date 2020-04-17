@@ -5122,13 +5122,13 @@ small {
   font-size: 1.3rem;
   line-height: inherit;
 }
-
+/* 
 .btn:focus,
 .btn-large:focus,
 .btn-small:focus,
 .btn-floating:focus {
   background-color: #1d7d74;
-}
+} */
 
 .btn,
 .btn-large,
@@ -5987,10 +5987,10 @@ select:focus {
   outline: 1px solid #c9f3ef;
 }
 
-button:focus {
+/* button:focus {
   outline: 0;
   background-color: #2ab7a9;
-}
+} */
 
 label {
   font-size: 0.8rem;
@@ -12711,17 +12711,14 @@ input[type="button"].btn-block {
 .btn-group-vertical > .btn:active,
 .btn-group-vertical > .btn.active {
   z-index: 1;
+  background-color: #f0f0f0;
 }
 
 .btn-toolbar {
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -ms-flex-pack: start;
-  -webkit-box-pack: start;
-  justify-content: flex-start;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
 }
 
 .btn-toolbar .input-group {
@@ -15389,7 +15386,7 @@ a.close.disabled {
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 0.5rem;
+  padding: 0 10px;
   pointer-events: none;
 }
 

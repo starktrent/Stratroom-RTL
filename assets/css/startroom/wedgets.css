@@ -714,7 +714,7 @@ button {
 
 .theme-black .sidebar .menu .list li.active {
   background-color: #dcdcdc;
-  border-left: 4px solid #3a6596;
+  border-left: 4px solid #1e252d;
 }
 
 table * {
@@ -779,7 +779,7 @@ a :hover {
 }
 
 .mb_bcrumb {
-  margin-bottom: -35px !important;
+  margin-bottom: 0 !important;
 }
 
 table td {
@@ -919,18 +919,18 @@ table td {
 }
 
 .nestedRed {
-  background-color: #dcdcdc;
-  border-left: 16px solid red;
+  background-color: #696969;
+  border-right: 16px solid red;
 }
 
 .nestedRed > h2 > strong {
-  color: #000000 !important;
+  color: #fff !important;
   font-size: 13px;
 }
 
 .nestedGreen {
-  background-color: #dcdcdc;
-  border-left: 16px solid #1aa243;
+  background-color: #696969;
+  border-right: 16px solid #1aa243;
 }
 
 .nestedGreen > h2 > strong {
@@ -939,8 +939,8 @@ table td {
 }
 
 .nestedYellow {
-  background-color: #dcdcdc;
-  border-left: 16px solid #ffd500;
+  background-color: #696969;
+  border-right: 16px solid #ffd500;
 }
 
 .nestedYellow > h2 > strong {
@@ -949,7 +949,7 @@ table td {
 }
 
 .nestedViolet {
-  background-color: #dcdcdc;
+  background-color: #696969;
   border-left: 16px solid #e84343;
 }
 

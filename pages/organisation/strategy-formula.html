@@ -101,7 +101,7 @@
           ></a>
           <a href="#" onClick="return false;" class="bars"></a>
           <a href="#" onClick="return false;" class="bar_nav sidemenu-collapse"
-            ><i class="nav-hdr-btn ti-menu" style="color: #000"></i
+            ><i class="nav-hdr-btn ti-menu" style="color: #000;"></i
           ></a>
           <a class="navbar-brand nav_float" href="#">
             <img
@@ -113,7 +113,7 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="fullscreen" style="padding: 4px;left: -14px;">
+            <li class="fullscreen" style="padding: 4px; left: -14px;">
               <ul class="list-unstyled order-list">
                 <li class="avatar avatar-sm">
                   <img
@@ -152,13 +152,13 @@
               <form class="form-header" action="" method="POST">
                 <input
                   class="au-input au-input--xl"
-                  style="min-width: 20%"
+                  style="min-width: 20%;"
                   type="text"
                   name="search"
                   placeholder="Search"
                 />
                 <button class="au-btn--submit" type="submit">
-                  <i class="fa fa-search" style="color:gray"></i>
+                  <i class="fa fa-search" style="color: gray;"></i>
                 </button>
               </form>
             </li>
@@ -176,7 +176,7 @@
                 data-toggle="dropdown"
                 role="button"
               >
-                <i class="nav-hdr-btn ti-bell" style="color: gray"></i>
+                <i class="nav-hdr-btn ti-bell" style="color: gray;"></i>
                 <span class="notify"></span>
                 <span class="heartbeat"></span>
               </a>
@@ -189,7 +189,7 @@
                 data-toggle="dropdown"
                 role="button"
               >
-                <i class="nav-hdr-btn ti-settings" style="color: gray"></i>
+                <i class="nav-hdr-btn ti-settings" style="color: gray;"></i>
                 <span class="notify"></span>
                 <span class="heartbeat"></span>
               </a>
@@ -199,7 +199,7 @@
               <a
                 href="#"
                 onclick="return false;"
-                class=" dropdown-toggle js-right-sidebar"
+                class="dropdown-toggle js-right-sidebar"
                 data-close="true"
               >
                 <!-- <img src="../../assets/images/user.jpg" alt="user"> -->
@@ -396,7 +396,7 @@
                   <li
                     _ngcontent-hhc-c5=""
                     class="center avatar avatar-sm"
-                    style="width:85px"
+                    style="width: 85px;"
                   >
                     <img
                       _ngcontent-hhc-c5=""
@@ -418,7 +418,7 @@
                 </ul>
                 <ul
                   class="setting-list profile-replace list-unstyled m-t-20"
-                  style="display: none"
+                  style="display: none;"
                 >
                   <li class="center">
                     <form id="profileForm">
@@ -429,7 +429,7 @@
                             id="profileImage"
                             _ngcontent-hhc-c5=""
                             class="center avatar avatar-sm"
-                            style="width:85px; z-index:-1"
+                            style="width: 85px; z-index: -1;"
                           >
                             <img
                               _ngcontent-hhc-c5=""
@@ -577,7 +577,7 @@
                                           <a href="#" class="reportingEdit"
                                             ><i
                                               class="fas fa-pencil-alt"
-                                              style="font-size: 14px"
+                                              style="font-size: 14px;"
                                             ></i
                                           ></a>
                                         </div>
@@ -603,7 +603,7 @@
                                           <a href="#" class="reportingEdit"
                                             ><i
                                               class="fas fa-pencil-alt"
-                                              style="font-size: 14px"
+                                              style="font-size: 14px;"
                                             ></i
                                           ></a>
                                         </div>
@@ -611,7 +611,7 @@
                                     </ul>
                                     <ul
                                       class="setting-list reporting-replace-add list-unstyled m-t-20"
-                                      style="display:none"
+                                      style="display: none;"
                                     >
                                       <li class="row">
                                         <form id="reportingAddForm">
@@ -760,7 +760,7 @@
                                           <a href="#" class="directEdit"
                                             ><i
                                               class="fas fa-pencil-alt"
-                                              style="font-size: 14px"
+                                              style="font-size: 14px;"
                                             ></i
                                           ></a>
                                         </div>
@@ -786,7 +786,7 @@
                                           <a href="#" class="directEdit"
                                             ><i
                                               class="fas fa-pencil-alt"
-                                              style="font-size: 14px"
+                                              style="font-size: 14px;"
                                             ></i
                                           ></a>
                                         </div>
@@ -794,7 +794,7 @@
                                     </ul>
                                     <ul
                                       class="setting-list direct-replace-add list-unstyled m-t-20"
-                                      style="display:none"
+                                      style="display: none;"
                                     >
                                       <li class="row">
                                         <form id="directAddForm">
@@ -950,23 +950,73 @@
     </aside>
     <!-- #END# Right Sidebar -->
 
-    <section class="content" id="" style="margin-top: 5%;">
+    <!-- Add People Modal -->
+    <div id="addpeople" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" style="margin-top: 10%;">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Add People</h4>
+            <button type="button" class="close pull-right" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <label for="objective_owner">People</label>
+                <select
+                  id="objective_owner"
+                  name=""
+                  class="select_all"
+                  multiple
+                  style="display: none !important;"
+                >
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </div>
+              <div class="form-group col-md-12">
+                <hr />
+              </div>
+              <div class="form-group col-lg-8 col-md-4 col-sm-12"></div>
+              <div class="form-group col-lg-2 col-md-4 col-sm-6">
+                <button
+                  type="button"
+                  class="btn custom-form-control btn-custom-secondary"
+                  data-dismiss="modal"
+                >
+                  <i class="fas fa-ban"></i> Close
+                </button>
+              </div>
+              <div class="form-group col-lg-2 col-md-4 col-sm-6">
+                <button
+                  type="button"
+                  class="btn custom-form-control btn-custom-primary"
+                >
+                  <i class="fas fa-check"></i> Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content">
       <!-- Page Header -->
       <div
-        class="page-header row no-gutters py-4"
-        style="background-color: #3A6596;"
+        class="page-header row no-gutters py-2 m-t--60"
+        style="margin-bottom: 8px !important;"
       >
-        <div
-          class="col-lg-6 col-md-6 text-center text-sm-left pt-3 mb-0 ml-4"
-          style="color: #fff;"
-        >
-          <span class="text-uppercase page-subtitle">Overview</span>
-          <h3
+        <div class="col-lg-6 col-md-6 text-center text-sm-left pt-2 mb-0 ml-4">
+          <h5
             class="page-title"
             style="font-weight: 600; text-transform: uppercase;"
           >
-            Strategy Formulation
-          </h3>
+            Overview - Strategy Formulation
+          </h5>
         </div>
       </div>
       <!-- End Page Header -->
@@ -1017,7 +1067,7 @@
               </select>
             </div>
 
-            <div class="form-group col-md-3" style="padding-left:50px;">
+            <div class="form-group col-md-3" style="padding-left: 50px;">
               <label for="plan_type">Formulation Team</label>
               <div class="d-flex flex-column mt-2">
                 <ul class="list-unstyled order-list d-flex">
@@ -1133,17 +1183,16 @@
 
       <!-- Page Header -->
       <div
-        class="page-header row no-gutters py-4 mt-5"
-        style="background-color: #3A6596;"
+        class="page-header row no-gutters py-2 m-t-20"
+        style="margin-bottom: 8px !important;"
       >
-        <div
-          class="col-lg-6 col-md-6 text-center text-sm-left pt-3 mb-0 ml-4"
-          style="color: #fff;"
-        >
-          <span class="text-uppercase page-subtitle">Overview</span>
-          <h3 class="page-title" style="font-weight: 600;">
-            Corporate Strategy
-          </h3>
+        <div class="col-lg-6 col-md-6 text-center text-sm-left pt-2 mb-0 ml-4">
+          <h5
+            class="page-title"
+            style="font-weight: 600; text-transform: uppercase;"
+          >
+            Overview - Corporate Strategy
+          </h5>
         </div>
       </div>
       <!-- End Page Header -->
@@ -1155,7 +1204,7 @@
         <div class="col-lg-12">
           <ul class="nav nav-tabs" id="tabs">
             <li class="nabti">
-              <button class="" onclick="addTab('#content');">
+              <button class="" onclick="addTab('#');">
                 <i class="fa fa-save"></i>
               </button>
             </li>
@@ -1218,7 +1267,7 @@
       </div>
 
       <div class="tab-content" id="tab-content">
-        <div class="tab-pane body" id="content">
+        <div class="tab-pane body content-view" id="content">
           <div
             class="card card-small crdbg objective"
             style="margin: 0 !important;"
@@ -1227,11 +1276,7 @@
               <div class="row" style="background-color: #dee2e6;">
                 <div class="col-lg-12 pt-2 pb-2">
                   <div class="float-right p-1 pr-4">
-                    <button
-                      class="form-control"
-                      data-toggle="modal"
-                      data-target="#max"
-                    >
+                    <button class="form-control contentViewButton">
                       <i class="fa fa-external-link"></i>
                     </button>
                   </div>
@@ -1266,7 +1311,7 @@
                       >
                         <i
                           class="fas fa-plus-circle pull-right"
-                          style="font-size: 18px; color:#3A6596"
+                          style="font-size: 18px; color: #1e252d;"
                         ></i>
                       </button>
                     </div>
@@ -1308,7 +1353,7 @@
                       >
                         <i
                           class="fas fa-plus-circle"
-                          style="font-size: 18px; color:#3A6596"
+                          style="font-size: 18px; color: #1e252d;"
                         ></i>
                       </button>
                     </div>
@@ -1398,7 +1443,7 @@
           </div>
         </div>
         <div class="tab-content" id="tab-content">
-          <div class="tab-pane body active" id="finance">
+          <div class="tab-pane body active finance-view" id="finance">
             <!-- Default Light Table -->
             <div
               class="card card-small crdbg objective"
@@ -1408,15 +1453,11 @@
                 <div class="row" style="background-color: #dee2e6;">
                   <div class="col-lg-12 pt-2 pb-2">
                     <div class="float-right p-1 pr-4">
-                      <button
-                        class="form-control"
-                        data-toggle="modal"
-                        data-target="#max"
-                      >
+                      <button class="form-control financeViewButton">
                         <i class="fa fa-external-link"></i>
                       </button>
                     </div>
-                    <div class="float-right p-1 ">
+                    <div class="float-right p-1">
                       <button
                         id="add_objective"
                         onclick="objective_first('objective_first')"
@@ -1447,7 +1488,7 @@
                         >
                           <i
                             class="fas fa-plus-circle pull-right"
-                            style="font-size: 18px; color:#3A6596"
+                            style="font-size: 18px; color: #1e252d;"
                           ></i>
                         </button>
                       </div>
@@ -1489,7 +1530,7 @@
                         >
                           <i
                             class="fas fa-plus-circle"
-                            style="font-size: 18px; color:#3A6596"
+                            style="font-size: 18px; color: #1e252d;"
                           ></i>
                         </button>
                       </div>
@@ -1581,7 +1622,7 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane body" id="business">
+          <div class="tab-pane body business-view" id="business">
             <!-- Default Light Table -->
             <div
               class="card card-small crdbg objective"
@@ -1591,15 +1632,11 @@
                 <div class="row" style="background-color: #dee2e6;">
                   <div class="col-lg-12 pt-2 pb-2">
                     <div class="float-right p-1 pr-4">
-                      <button
-                        class="form-control"
-                        data-toggle="modal"
-                        data-target="#max"
-                      >
+                      <button class="form-control businessViewButton">
                         <i class="fa fa-external-link"></i>
                       </button>
                     </div>
-                    <div class="float-right p-1 ">
+                    <div class="float-right p-1">
                       <button
                         id="add_objective"
                         onclick="objective('objective')"
@@ -1630,7 +1667,7 @@
                         >
                           <i
                             class="fas fa-plus-circle pull-right"
-                            style="font-size: 18px; color:#3A6596"
+                            style="font-size: 18px; color: #1e252d;"
                           ></i>
                         </button>
                       </div>
@@ -1672,7 +1709,7 @@
                         >
                           <i
                             class="fas fa-plus-circle"
-                            style="font-size: 18px; color:#3A6596"
+                            style="font-size: 18px; color: #1e252d;"
                           ></i>
                         </button>
                       </div>
@@ -1765,392 +1802,40 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Add People Modal -->
-        <div id="addpeople" class="modal fade" role="dialog">
-          <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div
-                class="modal-header"
-                style="background-color: #3A6596; color: #fff;"
+      <!-- View Objective Modal -->
+      <div id="max" class="modal fade" role="dialog">
+        <div
+          class="modal-dialog modal-lg"
+          style="margin-top: 8%; max-width: 80%;"
+        >
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4>View Objectives</h4>
+              <button
+                type="button"
+                class="close pull-right"
+                data-dismiss="modal"
               >
-                <!--button type="button" class="close pull-right" data-dismiss="modal">&times;</button-->
-                <h4>Add People</h4>
-              </div>
-              <div class="modal-body">
-                <label for="objective_owner">People</label>
-                <select
-                  id="objective_owner"
-                  name=""
-                  class="select_all"
-                  multiple
-                  style="display: none !important;"
-                >
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
-
-                <button
-                  type="button"
-                  class="form-control add"
-                  style="background-color: #3A6596; color: #fff;"
-                >
-                  Save
-                </button>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-default"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-              </div>
+                &times;
+              </button>
             </div>
-          </div>
-        </div>
-
-        <!-- Modal -->
-        <div id="max" class="modal fade" role="dialog">
-          <div
-            class="modal-dialog modal-dialog-centered modal-lg"
-            style="max-width: 80% !important;"
-          >
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div
-                class="modal-header"
-                style="background-color: #3A6596; color: #fff;"
+            <div class="modal-body">
+              <!-- Default Light Table -->
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-custom-secondary"
+                data-dismiss="modal"
               >
-                <h4>View Objectives</h4>
-                <button
-                  type="button"
-                  class="close pull-right"
-                  data-dismiss="modal"
-                >
-                  &times;
-                </button>
-              </div>
-              <div class="modal-body">
-                <!-- Default Light Table -->
-                <div class="card card-small">
-                  <div class="card-body p-0 pb-3" id="objective">
-                    <div class="row mt-4 ml-4" id="row_objective">
-                      <div class="col-md-4">
-                        <div class="row">
-                          <div class="col-md-10">
-                            <label
-                              for="plan_type"
-                              style="font-size: 15px; color: #222;"
-                              >Objectives</label
-                            >
-                          </div>
-                          <div class="col-md-2">
-                            <button
-                              id="btn_copy"
-                              onclick="initiative('busi_modal')"
-                              class="form-control"
-                              style="border: none;"
-                            >
-                              <i
-                                class="fas fa-plus-circle pull-right"
-                                style="font-size: 18px; color:#3A6596"
-                              ></i>
-                            </button>
-                          </div>
-                        </div>
-                        <div class="form-row mt-4" id="busi_modal">
-                          <div class="col-md-2 form-group">
-                            <input
-                              type="text"
-                              class="form-control browser-default"
-                              placeholder="ID"
-                              style="height: 47px;"
-                            />
-                          </div>
-                          <div class="col-md-10 form-group">
-                            <textarea
-                              class="form-control browser-default"
-                              placeholder=""
-                              cols=""
-                              rows="2"
-                            ></textarea>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-8">
-                        <div class="row">
-                          <div class="col-md-10">
-                            <label
-                              for="plan_type"
-                              style="font-size: 15px; color: #222;"
-                              >KPI'S</label
-                            >
-                          </div>
-                          <div class="col-md-2">
-                            <button
-                              id="btn_copy"
-                              onclick="kpi('kpi_modal')"
-                              class="form-control"
-                              style="border: none;"
-                            >
-                              <i
-                                class="fas fa-plus-circle"
-                                style="font-size: 18px; color:#3A6596"
-                              ></i>
-                            </button>
-                          </div>
-                        </div>
-                        <div class="form-row mt-4" id="kpi_modal">
-                          <div class="col-md-1 form-group">
-                            <input
-                              type="text"
-                              class="form-control browser-default"
-                              placeholder="ID"
-                              style="height: 47px;"
-                            />
-                          </div>
-                          <div class="col-md-5 form-group">
-                            <textarea
-                              class="form-control browser-default"
-                              placeholder=""
-                              cols="2"
-                              rows="2"
-                            ></textarea>
-                          </div>
-                          <div class="col-md-2 form-group">
-                            <select
-                              id="plan_type"
-                              class="form-control"
-                              style="height: 47px;"
-                            >
-                              <option value=""> Frequency</option>
-                              <option value=""> Daily</option>
-                              <option value=""> Weekly</option>
-                              <option value=""> Monthly</option>
-                              <option value=""> Annual</option>
-                            </select>
-                          </div>
-                          <div class="col-md-2 form-group">
-                            <input
-                              type="text"
-                              class="form-control browser-default"
-                              placeholder="Target"
-                              style="height: 47px;"
-                            />
-                          </div>
-                          <div
-                            class="col-md-2 form-group"
-                            style="margin-top: 10px;"
-                          >
-                            <ul class="list-unstyled order-list d-flex">
-                              <li class="avatar avatar-sm">
-                                <img
-                                  class="rounded-circle sub_init_img"
-                                  src="../../assets/images/user/user9.jpg"
-                                  alt="user"
-                                  width="50"
-                                />
-                              </li>
-                              <li class="avatar avatar-sm">
-                                <img
-                                  class="rounded-circle sub_init_img"
-                                  src="../../assets/images/user/user8.jpg"
-                                  alt="user"
-                                  width="50"
-                                />
-                              </li>
-
-                              <li class="avatar avatar-sm">
-                                <span _ngcontent-hhc-c5="" class="badge"
-                                  >+3</span
-                                >
-                              </li>
-                              <div class="image-upload">
-                                <label for="file-input">
-                                  <li
-                                    _ngcontent-hhc-c5=""
-                                    class="avatar avatar-sm"
-                                  >
-                                    <a
-                                      href="#"
-                                      class="favgs"
-                                      data-toggle="modal"
-                                      data-target="#addpeople"
-                                    >
-                                      <span _ngcontent-hhc-c5="" class="badge"
-                                        >+<span id="count"> </span
-                                      ></span>
-                                    </a>
-                                  </li>
-                                </label>
-                              </div>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-default"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal -->
-        <div id="notes" class="modal fade" role="dialog">
-          <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <!--button type="button" class="close pull-right" data-dismiss="modal">&times;</button-->
-                <h4>Notes / Minutes</h4>
-              </div>
-              <div class="modal-body">
-                <table class="table table-bordered">
-                  <thead class="bg-light">
-                    <tr>
-                      <th>Notes</th>
-                      <th>Responsible</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Note 1</td>
-                      <td>
-                        <div class="avatar-wrapper avatar-wrapper-overlap">
-                          <div class="avatar-icon-wrapper avatar-icon-sm">
-                            <div class="avatar-icon">
-                              <img src="images/avatars/0.jpg" alt="" />
-                            </div>
-                          </div>
-                          <div class="avatar-icon-wrapper avatar-icon-sm">
-                            <div class="avatar-icon">
-                              <img src="images/avatars/0.jpg" alt="" />
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Note 2</td>
-                      <td>
-                        <div class="avatar-wrapper avatar-wrapper-overlap">
-                          <div class="avatar-icon-wrapper avatar-icon-sm">
-                            <div class="avatar-icon">
-                              <img src="images/avatars/0.jpg" alt="" />
-                            </div>
-                          </div>
-                          <div class="avatar-icon-wrapper avatar-icon-sm">
-                            <div class="avatar-icon">
-                              <img src="images/avatars/0.jpg" alt="" />
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-default"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal -->
-        <div id="action" class="modal fade" role="dialog">
-          <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <!--button type="button" class="close pull-right" data-dismiss="modal">&times;</button-->
-                <h4>Actions</h4>
-              </div>
-              <div class="modal-body">
-                <table class="table table-bordered">
-                  <thead class="bg-light">
-                    <tr>
-                      <th>Actions</th>
-                      <th>By Date</th>
-                      <th>Responsible</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Action 1</td>
-                      <td>
-                        <input
-                          type="text"
-                          class="form-control"
-                          value="01-01-2020"
-                          readonly
-                        />
-                      </td>
-                      <td>
-                        <div class="avatar-wrapper avatar-wrapper-overlap">
-                          <div class="avatar-icon-wrapper avatar-icon-sm">
-                            <div class="avatar-icon">
-                              <img src="images/avatars/0.jpg" alt="" />
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td><i class="fa fa-check" aria-hidden="true"></i></td>
-                    </tr>
-                    <tr>
-                      <td>Action 1</td>
-                      <td>
-                        <input
-                          type="text"
-                          class="form-control"
-                          value="01-01-2020"
-                          readonly
-                        />
-                      </td>
-                      <td>
-                        <div class="avatar-wrapper avatar-wrapper-overlap">
-                          <div class="avatar-icon-wrapper avatar-icon-sm">
-                            <div class="avatar-icon">
-                              <img src="images/avatars/0.jpg" alt="" />
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-default"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-              </div>
+                <i class="fas fa-ban"></i> Close
+              </button>
+              <button type="button" class="btn btn-custom-primary">
+                <i class="fas fa-download"></i> Download
+              </button>
             </div>
           </div>
         </div>
@@ -2184,10 +1869,10 @@
     <script>
       $(".daterangepicker-field").daterangepicker({
         forceUpdate: true,
-        callback: function(startDate, endDate, period) {
+        callback: function (startDate, endDate, period) {
           var title = startDate.format("L") + " – " + endDate.format("L");
           $(this).val(title);
-        }
+        },
       });
     </script>
 
@@ -2205,14 +1890,14 @@
     <script>
       $(".daterangepicker-field").daterangepicker({
         forceUpdate: true,
-        callback: function(startDate, endDate, period) {
+        callback: function (startDate, endDate, period) {
           var title = startDate.format("L") + " – " + endDate.format("L");
           $(this).val(title);
-        }
+        },
       });
 
-      $(document).ready(function() {
-        $("#my_id").change(function(e) {
+      $(document).ready(function () {
+        $("#my_id").change(function (e) {
           var files = $(this)[0].files;
           var fileName = files.length;
           alert('The file "' + fileName + '" has been selected.');
@@ -2237,9 +1922,7 @@
         div.innerHTML += `<div class="col-md-1 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-5 form-group"> <textarea class="form-control browser-default" placeholder="" cols="2" rows="2"></textarea> </div><div class="col-md-2 form-group"> <select id="plan_type" class="form-control" style="height: 47px;"> <option value=""> Frequency</option> <option value=""> Daily</option> <option value=""> Weekly</option> <option value=""> Monthly</option> <option value=""> Annual</option> </select> </div><div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="Target" style="height: 47px;"> </div><div class="col-md-2 form-group" style="margin-top: 10px;"> <ul class="list-unstyled order-list d-flex"> <li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user9.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user8.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <span _ngcontent-hhc-c5="" class="badge">+3</span> </li><div class="image-upload"> <label for="file-input"> <li _ngcontent-hhc-c5="" class="avatar avatar-sm"> <a href="#" class="favgs" data-toggle="modal" data-target="#addpeople"> <span _ngcontent-hhc-c5="" class="badge">+<span id="count"> </span></span> </a> </li></label> </div></ul> </div>`;
       }
       function remove() {
-        $(this)
-          .parents(".clonedInput")
-          .remove();
+        $(this).parents(".clonedInput").remove();
       }
 
       function initiative(divID) {
@@ -2273,16 +1956,16 @@
 
       function objective(divID) {
         var div = document.getElementById(divID);
-        div.innerHTML += `<hr/><div class="row mt-2 ml-4"> <div class="col-md-4"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">Objectives</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="obj1()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle pull-right" style="font-size: 18px; color:#3A6596"></i> </button> </div></div><div class="form-row mt-4" id="obj1"> <div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-10 form-group"> <textarea class="form-control browser-default" placeholder="" cols="" rows="2"></textarea> </div></div></div><div class="col-md-8"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">KPI'S</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="initiative1()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle" style="font-size: 18px; color:#3A6596"></i> </button> </div></div><div class="form-row mt-4" id="initiative1"> <div class="col-md-1 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-5 form-group"> <textarea class="form-control browser-default" placeholder="" cols="2" rows="2"></textarea> </div><div class="col-md-2 form-group"> <select id="plan_type" class="form-control" style="height: 47px;"> <option value=""> Frequency</option> <option value=""> Daily</option> <option value=""> Weekly</option> <option value=""> Monthly</option> <option value=""> Annual</option> </select> </div><div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="Target" style="height: 47px;"> </div><div class="col-md-2 form-group" style="margin-top: 10px;"> <ul class="list-unstyled order-list d-flex"> <li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user9.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user8.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <span _ngcontent-hhc-c5="" class="badge">+3</span> </li><div class="image-upload"> <label for="file-input"> <li _ngcontent-hhc-c5="" class="avatar avatar-sm"> <a href="#" class="favgs" data-toggle="modal" data-target="#addpeople"> <span _ngcontent-hhc-c5="" class="badge">+<span id="count"> </span></span> </a> </li></label> </div></ul> </div></div></div></div>`;
+        div.innerHTML += `<hr/><div class="row mt-2 ml-4"> <div class="col-md-4"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">Objectives</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="obj1()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle pull-right" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="obj1"> <div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-10 form-group"> <textarea class="form-control browser-default" placeholder="" cols="" rows="2"></textarea> </div></div></div><div class="col-md-8"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">KPI'S</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="initiative1()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="initiative1"> <div class="col-md-1 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-5 form-group"> <textarea class="form-control browser-default" placeholder="" cols="2" rows="2"></textarea> </div><div class="col-md-2 form-group"> <select id="plan_type" class="form-control" style="height: 47px;"> <option value=""> Frequency</option> <option value=""> Daily</option> <option value=""> Weekly</option> <option value=""> Monthly</option> <option value=""> Annual</option> </select> </div><div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="Target" style="height: 47px;"> </div><div class="col-md-2 form-group" style="margin-top: 10px;"> <ul class="list-unstyled order-list d-flex"> <li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user9.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user8.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <span _ngcontent-hhc-c5="" class="badge">+3</span> </li><div class="image-upload"> <label for="file-input"> <li _ngcontent-hhc-c5="" class="avatar avatar-sm"> <a href="#" class="favgs" data-toggle="modal" data-target="#addpeople"> <span _ngcontent-hhc-c5="" class="badge">+<span id="count"> </span></span> </a> </li></label> </div></ul> </div></div></div></div>`;
       }
       function objective_first(divID) {
         var div = document.getElementById(divID);
-        div.innerHTML += `<hr/><div class="row mt-2 ml-4"> <div class="col-md-4"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">Objectives</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="obj2()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle pull-right" style="font-size: 18px; color:#3A6596"></i> </button> </div></div><div class="form-row mt-4" id="obj2"> <div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-10 form-group"> <textarea class="form-control browser-default" placeholder="" cols="" rows="2"></textarea> </div></div></div><div class="col-md-8"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">KPI'S</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="kpi1()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle" style="font-size: 18px; color:#3A6596"></i> </button> </div></div><div class="form-row mt-4" id="kpi1"> <div class="col-md-1 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-5 form-group"> <textarea class="form-control browser-default" placeholder="" cols="2" rows="2"></textarea> </div><div class="col-md-2 form-group"> <select id="plan_type" class="form-control" style="height: 47px;"> <option value=""> Frequency</option> <option value=""> Daily</option> <option value=""> Weekly</option> <option value=""> Monthly</option> <option value=""> Annual</option> </select> </div><div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="Target" style="height: 47px;"> </div><div class="col-md-2 form-group" style="margin-top: 10px;"> <ul class="list-unstyled order-list d-flex"> <li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user9.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user8.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <span _ngcontent-hhc-c5="" class="badge">+3</span> </li><div class="image-upload"> <label for="file-input"> <li _ngcontent-hhc-c5="" class="avatar avatar-sm"> <a href="#" class="favgs" data-toggle="modal" data-target="#addpeople"> <span _ngcontent-hhc-c5="" class="badge">+<span id="count"> </span></span> </a> </li></label> </div></ul> </div></div></div></div>`;
+        div.innerHTML += `<hr/><div class="row mt-2 ml-4"> <div class="col-md-4"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">Objectives</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="obj2()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle pull-right" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="obj2"> <div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-10 form-group"> <textarea class="form-control browser-default" placeholder="" cols="" rows="2"></textarea> </div></div></div><div class="col-md-8"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">KPI'S</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="kpi1()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="kpi1"> <div class="col-md-1 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-5 form-group"> <textarea class="form-control browser-default" placeholder="" cols="2" rows="2"></textarea> </div><div class="col-md-2 form-group"> <select id="plan_type" class="form-control" style="height: 47px;"> <option value=""> Frequency</option> <option value=""> Daily</option> <option value=""> Weekly</option> <option value=""> Monthly</option> <option value=""> Annual</option> </select> </div><div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="Target" style="height: 47px;"> </div><div class="col-md-2 form-group" style="margin-top: 10px;"> <ul class="list-unstyled order-list d-flex"> <li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user9.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user8.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <span _ngcontent-hhc-c5="" class="badge">+3</span> </li><div class="image-upload"> <label for="file-input"> <li _ngcontent-hhc-c5="" class="avatar avatar-sm"> <a href="#" class="favgs" data-toggle="modal" data-target="#addpeople"> <span _ngcontent-hhc-c5="" class="badge">+<span id="count"> </span></span> </a> </li></label> </div></ul> </div></div></div></div>`;
       }
 
       function objective_extra(divID) {
         var div = document.getElementById(divID);
-        div.innerHTML += `<hr/><div class="row mt-2 ml-4"> <div class="col-md-4"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">Objectives</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="obj3()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle pull-right" style="font-size: 18px; color:#3A6596"></i> </button> </div></div><div class="form-row mt-4" id="obj3"> <div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-10 form-group"> <textarea class="form-control browser-default" placeholder="" cols="" rows="2"></textarea> </div></div></div><div class="col-md-8"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">KPI'S</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="kpi3()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle" style="font-size: 18px; color:#3A6596"></i> </button> </div></div><div class="form-row mt-4" id="kpi3"> <div class="col-md-1 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-5 form-group"> <textarea class="form-control browser-default" placeholder="" cols="2" rows="2"></textarea> </div><div class="col-md-2 form-group"> <select id="plan_type" class="form-control" style="height: 47px;"> <option value=""> Frequency</option> <option value=""> Daily</option> <option value=""> Weekly</option> <option value=""> Monthly</option> <option value=""> Annual</option> </select> </div><div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="Target" style="height: 47px;"> </div><div class="col-md-2 form-group" style="margin-top: 10px;"> <ul class="list-unstyled order-list d-flex"> <li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user9.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user8.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <span _ngcontent-hhc-c5="" class="badge">+3</span> </li><div class="image-upload"> <label for="file-input"> <li _ngcontent-hhc-c5="" class="avatar avatar-sm"> <a href="#" class="favgs" data-toggle="modal" data-target="#addpeople"> <span _ngcontent-hhc-c5="" class="badge">+<span id="count"> </span></span> </a> </li></label> </div></ul> </div></div></div></div>`;
+        div.innerHTML += `<hr/><div class="row mt-2 ml-4"> <div class="col-md-4"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">Objectives</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="obj3()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle pull-right" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="obj3"> <div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-10 form-group"> <textarea class="form-control browser-default" placeholder="" cols="" rows="2"></textarea> </div></div></div><div class="col-md-8"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">KPI'S</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="kpi3()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="kpi3"> <div class="col-md-1 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-5 form-group"> <textarea class="form-control browser-default" placeholder="" cols="2" rows="2"></textarea> </div><div class="col-md-2 form-group"> <select id="plan_type" class="form-control" style="height: 47px;"> <option value=""> Frequency</option> <option value=""> Daily</option> <option value=""> Weekly</option> <option value=""> Monthly</option> <option value=""> Annual</option> </select> </div><div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="Target" style="height: 47px;"> </div><div class="col-md-2 form-group" style="margin-top: 10px;"> <ul class="list-unstyled order-list d-flex"> <li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user9.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user8.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <span _ngcontent-hhc-c5="" class="badge">+3</span> </li><div class="image-upload"> <label for="file-input"> <li _ngcontent-hhc-c5="" class="avatar avatar-sm"> <a href="#" class="favgs" data-toggle="modal" data-target="#addpeople"> <span _ngcontent-hhc-c5="" class="badge">+<span id="count"> </span></span> </a> </li></label> </div></ul> </div></div></div></div>`;
       }
     </script>
 
@@ -2290,15 +1973,15 @@
       $("#timepicker_pop").timepicker();
     </script>
     <script>
-      $(function() {
+      $(function () {
         $('input[name="date"]').daterangepicker(
           {
             singleDatePicker: true,
             showDropdowns: true,
             minYear: 1901,
-            maxYear: parseInt(moment().format("YYYY"), 10)
+            maxYear: parseInt(moment().format("YYYY"), 10),
           },
-          function(start, end, label) {
+          function (start, end, label) {
             var years = moment().diff(start, "years");
             alert("You are " + years + " years old!");
           }
@@ -2332,13 +2015,13 @@
     </script>
 
     <script>
-      $(document).ready(function() {
+      $(document).ready(function () {
         // $('select').val([1]);
         $("#objective_owner").formSelect();
         $("select.select_all")
           .siblings("ul")
           .prepend("<li id=sm_select_all><span>Select All</span></li>");
-        $("li#sm_select_all").on("click", function() {
+        $("li#sm_select_all").on("click", function () {
           var jq_elem = $(this),
             jq_elem_span = jq_elem.find("span"),
             select_all = jq_elem_span.text() == "Select All",
@@ -2346,15 +2029,29 @@
           jq_elem_span.text(set_text);
           jq_elem
             .siblings("li")
-            .filter(function() {
-              return (
-                $(this)
-                  .find("input")
-                  .prop("checked") != select_all
-              );
+            .filter(function () {
+              return $(this).find("input").prop("checked") != select_all;
             })
             .click();
         });
+      });
+
+      $(".contentViewButton").click(function () {
+        var newRow = $(".content-view").html();
+        $("#max .modal-body").html(newRow);
+        $("#max").modal();
+      });
+
+      $(".financeViewButton").click(function () {
+        var newRow = $(".finance-view").html();
+        $("#max .modal-body").html(newRow);
+        $("#max").modal();
+      });
+
+      $(".businessViewButton").click(function () {
+        var newRow = $(".business-view").html();
+        $("#max .modal-body").html(newRow);
+        $("#max").modal();
       });
     </script>
   </body>
