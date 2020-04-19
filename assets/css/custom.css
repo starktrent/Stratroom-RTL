@@ -599,7 +599,7 @@ ul.gj-list-md li {
 
 .idea-header h4 {
   margin-top: 14%;
-  text-align: left;
+  text-align: right;
   font-family: Ubuntu;
   font-weight: 500;
   font-size: 22px;
@@ -622,7 +622,7 @@ ul.gj-list-md li {
   color: rgba(92, 93, 93, 1);
   top: 45%;
   position: absolute;
-  left: 85%;
+  right: 85%;
 }
 
 .idea-body .about_idea {

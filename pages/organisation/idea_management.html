@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<a lang="en">
+<html dir="rtl" lang="ar">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -85,30 +85,67 @@
     <!-- Top Bar -->
     <nav class="navbar">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <a
-            href="#"
-            onClick="return false;"
-            class="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#navbar-collapse"
-            aria-expanded="false"
-          ></a>
-          <a href="#" onClick="return false;" class="bars"></a>
-          <a href="#" onClick="return false;" class="bar_nav sidemenu-collapse"
-            ><i class="nav-hdr-btn ti-menu" style="color: #000;"></i
-          ></a>
-          <a class="navbar-brand nav_float" href="#">
-            <img
-              src="../../assets/images/Startroom_Final logo-01_1.png"
-              alt=""
-            />
-            <!-- <span class="logo-name">Img</span> -->
-          </a>
-        </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="fullscreen" style="padding: 4px; left: -14px;">
+          <ul class="nav navbar-nav">
+            <li class="">
+              <a
+                href="#"
+                onclick="return false;"
+                class="dropdown-toggle js-right-sidebar"
+                data-close="true"
+              >
+                <!-- <img src="../../assets/images/user.jpg" alt="user"> -->
+                <i class="fas fa-user-circle"></i>
+              </a>
+            </li>
+            <!-- #START# Notifications-->
+            <li class="dropdown">
+              <a
+                href="#"
+                onClick="return false;"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+              >
+                <i class="nav-hdr-btn ti-bell" style="color: gray;"></i>
+                <span class="notify"></span>
+                <span class="heartbeat"></span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a
+                href="#"
+                onClick="return false;"
+                data-toggle="modal"
+                data-target="#settings"
+                role="button"
+              >
+                <i class="nav-hdr-btn ti-settings" style="color: gray;"></i>
+                <span class="notify"></span>
+                <span class="heartbeat"></span>
+              </a>
+            </li>
+            <!-- #END# Notifications-->
+            <li class="fullscreen">
+              <!-- <i class="nav-hdr-btn ti-calendar" style="color: gray"></i> -->
+              <input class="daterangepicker-field top_datepicker" />
+            </li>
+            <!-- #END# Full Screen Button -->
+            <li class="fullscreen">
+              <form class="form-header" action="" method="POST">
+                <input
+                  class="au-input au-input--xl"
+                  style="min-width: 20%;"
+                  type="text"
+                  name="search"
+                  placeholder="Search"
+                />
+                <button class="au-btn--submit" type="submit">
+                  <i class="fa fa-search" style="color: gray;"></i>
+                </button>
+              </form>
+            </li>
+            <li class="fullscreen" style="padding: 4px;">
               <ul class="list-unstyled order-list">
                 <li class="avatar avatar-sm">
                   <img
@@ -143,69 +180,33 @@
                 </li>
               </ul>
             </li>
-            <li class="fullscreen">
-              <form class="form-header" action="" method="POST">
-                <input
-                  class="au-input au-input--xl"
-                  style="min-width: 20%;"
-                  type="text"
-                  name="search"
-                  placeholder="Search"
-                />
-                <button class="au-btn--submit" type="submit">
-                  <i class="fa fa-search" style="color: gray;"></i>
-                </button>
-              </form>
-            </li>
-            <li class="fullscreen">
-              <!-- <i class="nav-hdr-btn ti-calendar" style="color: gray"></i> -->
-              <input class="daterangepicker-field top_datepicker" />
-            </li>
-            <!-- #END# Full Screen Button -->
-            <!-- #START# Notifications-->
-            <li class="dropdown">
-              <a
-                href="#"
-                onClick="return false;"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-              >
-                <i class="nav-hdr-btn ti-bell" style="color: gray;"></i>
-                <span class="notify"></span>
-                <span class="heartbeat"></span>
-              </a>
-            </li>
-            <li class="dropdown">
-              <a
-                href="#"
-                onClick="return false;"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-              >
-                <i class="nav-hdr-btn ti-settings" style="color: gray;"></i>
-                <span class="notify"></span>
-                <span class="heartbeat"></span>
-              </a>
-            </li>
-            <!-- #END# Notifications-->
-            <li class="">
-              <a
-                href="#"
-                onclick="return false;"
-                class="dropdown-toggle js-right-sidebar"
-                data-close="true"
-              >
-                <!-- <img src="../../assets/images/user.jpg" alt="user"> -->
-                <i class="fas fa-user-circle"></i>
-              </a>
-            </li>
           </ul>
+        </div>
+        <div class="navbar-header navbar-right">
+          <a
+            href="#"
+            onClick="return false;"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+            aria-expanded="false"
+          ></a>
+          <a href="#" onClick="return false;" class="bars"></a>
+          <a href="#" onClick="return false;" class="bar_nav sidemenu-collapse"
+            ><i class="nav-hdr-btn ti-menu" style="color: #000;"></i
+          ></a>
+          <a class="navbar-brand nav_float" href="#">
+            <img
+              src="../../assets/images/Startroom_Final logo-01_1.png"
+              alt=""
+            />
+            <!-- <span class="logo-name">Img</span> -->
+          </a>
         </div>
       </div>
     </nav>
     <!-- #Top Bar -->
+
     <div>
       <!-- Left Sidebar -->
       <aside id="leftsidebar" class="sidebar">
@@ -218,46 +219,57 @@
                 <span>Organisation Structure</span>
               </a>
             </li>
+
             <li>
               <a href="#" onClick="return false;" class="menu-toggle">
-                <i class="fas fa-tachometer-alt"></i>
+                <i class="menu-icon fa fa-dashboard font_icon"></i>
                 <span>Dashboards</span>
               </a>
               <ul class="ml-menu">
-                <li><a href="#">BSC Dashboard</a></li>
-                <li><a href="#">Strategy Map</a></li>
+                <li>
+                  <a href="#">BSC Dashboard</a>
+                </li>
+                <li>
+                  <a href="#">Strategy Map</a>
+                </li>
               </ul>
             </li>
+
             <li class="">
               <a href="#" onClick="return false;" class="">
                 <i class="menu-icon fa fa-bar-chart font_icon"></i>
                 <span>Charts</span>
               </a>
             </li>
+
             <li class="">
               <a href="#" onClick="return false;" class="">
                 <i class="menu-icon fa fa-key font_icon"></i>
                 <span>Users & Access</span>
               </a>
             </li>
+
             <li class="">
               <a href="#" onClick="return false;" class="">
                 <i class="menu-icon fa fa-sitemap font_icon"></i>
                 <span>Workflows</span>
               </a>
             </li>
+
             <li class="">
               <a href="#" onClick="return false;" class="">
                 <i class="menu-icon fa fa-bell font_icon"></i>
                 <span>Notifications & Alerts</span>
               </a>
             </li>
+
             <li class="">
               <a href="#" onClick="return false;" class="">
                 <i class="menu-icon fa fa-database font_icon"></i>
                 <span>Data Management</span>
               </a>
             </li>
+
             <li>
               <a href="#" onClick="return false;" class="menu-toggle">
                 <i class="menu-icon fa fa-laptop font_icon"></i>
@@ -294,7 +306,9 @@
                     <li><a href="#">Milestones</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Reports Table</a></li>
+                <li>
+                  <a href="#">Reports Table</a>
+                </li>
                 <li>
                   <a
                     href="#"
@@ -309,8 +323,12 @@
                     <li><a href="#">Proof of Evidence</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Employee Layout</a></li>
-                <li><a href="#">Appraisal</a></li>
+                <li>
+                  <a href="#">Employee Layout</a>
+                </li>
+                <li>
+                  <a href="#">Appraisal</a>
+                </li>
                 <li>
                   <a
                     href="#"
@@ -328,6 +346,7 @@
                 <span>Widget Management</span>
               </a>
             </li>
+
             <li class="">
               <a href="#" onClick="return false;" class="">
                 <i class="menu-icon fa fa-pie-chart font_icon"></i>
@@ -915,21 +934,18 @@
     <section class="content">
       <!-- Page Header -->
       <div class="page-header row no-gutters py-2 m-t--70">
-        <div class="col-lg-6 col-md-6 text-center text-sm-left pt-2 mb-0 ml-4">
-          <h5
-            class="page-title"
-            style="font-weight: 600; text-transform: uppercase;"
-          >
+        <div class="col-lg-12 col-md-12 pt-2 mb-0 mr-4">
+          <h5 class="page-title">
             Thought Board
           </h5>
-          <!-- <button
+        </div>
+        <!-- <button
             class="btn btn-custom-secondary pull-right"
             data-toggle="modal"
             data-target="#addThought"
           >
             <i class="fas fa-plus"></i>
           </button> -->
-        </div>
       </div>
       <!-- End Page Header -->
 
@@ -943,7 +959,7 @@
                     <img
                       src="https://www.pngkey.com/png/full/391-3919742_an-image-of-hayley-jayne-menere-talent-manager.png"
                       alt="user"
-                      class="pull-right"
+                      class="pull-left"
                     />
                   </div>
                   <div class="col-md-8 col-sm-8 col-8 form-group">
@@ -1132,7 +1148,7 @@
                     <img
                       src="https://earthlette.com.au/wp-content/uploads/2016/10/Jem-final-profile-pic-circle2.png"
                       alt="user"
-                      class="pull-right"
+                      class="pull-left"
                     />
                   </div>
                   <div class="col-md-8 col-sm-8 col-8 form-group">
@@ -1324,7 +1340,7 @@
                     <img
                       src="https://www.skylightsearch.co.uk/wp-content/uploads/2017/01/Loren-profile-pic-circle.png"
                       alt="user"
-                      class="pull-right"
+                      class="pull-left"
                     />
                   </div>
                   <div class="col-md-8 col-sm-8 col-8 form-group">
@@ -1514,10 +1530,11 @@
                     <img
                       src="https://www.coachcarson.com/wp-content/uploads/2018/09/Chad-Profile-pic-circle.png"
                       alt="user"
-                      class="pull-right"
+                      class="pull-left"
                     />
                   </div>
                   <div class="col-md-8 col-sm-8 col-8 form-group">
+                    <h4>John Doe</h4>
                     <a
                       href="#"
                       onclick="return false;"
@@ -1527,7 +1544,7 @@
                       aria-haspopup="true"
                       aria-expanded="true"
                     >
-                      <i class="fas fa-ellipsis-v pull-right"></i>
+                      <i class="fas fa-ellipsis-v pull-left"></i>
                     </a>
                     <ul
                       class="dropdown-menu pull-right"
@@ -1553,7 +1570,6 @@
                         >
                       </li>
                     </ul>
-                    <h4>John Doe</h4>
                   </div>
                 </div>
               </div>
@@ -1765,4 +1781,4 @@
       });
     </script>
   </body>
-</a>
+</html>
