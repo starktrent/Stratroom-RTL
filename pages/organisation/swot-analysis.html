@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<a lang="en">
+<html dir="rtl" lang="ar">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -96,6 +96,13 @@
         border-radius: 10px;
         margin-bottom: 2px;
       }
+      tbody tr td a .fa-plus {
+        float: none;
+      }
+      label {
+        width: 100%;
+        text-align: right;
+      }
     </style>
   </head>
 
@@ -119,30 +126,67 @@
     <!-- Top Bar -->
     <nav class="navbar">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <a
-            href="#"
-            onClick="return false;"
-            class="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#navbar-collapse"
-            aria-expanded="false"
-          ></a>
-          <a href="#" onClick="return false;" class="bars"></a>
-          <a href="#" onClick="return false;" class="bar_nav sidemenu-collapse"
-            ><i class="nav-hdr-btn ti-menu" style="color: #000;"></i
-          ></a>
-          <a class="navbar-brand nav_float" href="#">
-            <img
-              src="../../assets/images/Startroom_Final logo-01_1.png"
-              alt=""
-            />
-            <!-- <span class="logo-name">Img</span> -->
-          </a>
-        </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="fullscreen" style="padding: 4px; left: -14px;">
+          <ul class="nav navbar-nav">
+            <li class="">
+              <a
+                href="#"
+                onclick="return false;"
+                class="dropdown-toggle js-right-sidebar"
+                data-close="true"
+              >
+                <!-- <img src="../../assets/images/user.jpg" alt="user"> -->
+                <i class="fas fa-user-circle"></i>
+              </a>
+            </li>
+            <!-- #START# Notifications-->
+            <li class="dropdown">
+              <a
+                href="#"
+                onClick="return false;"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+              >
+                <i class="nav-hdr-btn ti-bell" style="color: gray;"></i>
+                <span class="notify"></span>
+                <span class="heartbeat"></span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a
+                href="#"
+                onClick="return false;"
+                data-toggle="modal"
+                data-target="#settings"
+                role="button"
+              >
+                <i class="nav-hdr-btn ti-settings" style="color: gray;"></i>
+                <span class="notify"></span>
+                <span class="heartbeat"></span>
+              </a>
+            </li>
+            <!-- #END# Notifications-->
+            <li class="fullscreen">
+              <!-- <i class="nav-hdr-btn ti-calendar" style="color: gray"></i> -->
+              <input class="daterangepicker-field top_datepicker" />
+            </li>
+            <!-- #END# Full Screen Button -->
+            <li class="fullscreen">
+              <form class="form-header" action="" method="POST">
+                <input
+                  class="au-input au-input--xl"
+                  style="min-width: 20%;"
+                  type="text"
+                  name="search"
+                  placeholder="Search"
+                />
+                <button class="au-btn--submit" type="submit">
+                  <i class="fa fa-search" style="color: gray;"></i>
+                </button>
+              </form>
+            </li>
+            <li class="fullscreen" style="padding: 4px;">
               <ul class="list-unstyled order-list">
                 <li class="avatar avatar-sm">
                   <img
@@ -177,65 +221,28 @@
                 </li>
               </ul>
             </li>
-            <li class="fullscreen">
-              <form class="form-header" action="" method="POST">
-                <input
-                  class="au-input au-input--xl"
-                  style="min-width: 20%;"
-                  type="text"
-                  name="search"
-                  placeholder="Search"
-                />
-                <button class="au-btn--submit" type="submit">
-                  <i class="fa fa-search" style="color: gray;"></i>
-                </button>
-              </form>
-            </li>
-            <li class="fullscreen">
-              <!-- <i class="nav-hdr-btn ti-calendar" style="color: gray"></i> -->
-              <input class="daterangepicker-field top_datepicker" />
-            </li>
-            <!-- #END# Full Screen Button -->
-            <!-- #START# Notifications-->
-            <li class="dropdown">
-              <a
-                href="#"
-                onClick="return false;"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-              >
-                <i class="nav-hdr-btn ti-bell" style="color: gray;"></i>
-                <span class="notify"></span>
-                <span class="heartbeat"></span>
-              </a>
-            </li>
-            <li class="dropdown">
-              <a
-                href="#"
-                onClick="return false;"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-              >
-                <i class="nav-hdr-btn ti-settings" style="color: gray;"></i>
-                <span class="notify"></span>
-                <span class="heartbeat"></span>
-              </a>
-            </li>
-            <!-- #END# Notifications-->
-            <li class="">
-              <a
-                href="#"
-                onclick="return false;"
-                class="dropdown-toggle js-right-sidebar"
-                data-close="true"
-              >
-                <!-- <img src="../../assets/images/user.jpg" alt="user"> -->
-                <i class="fas fa-user-circle"></i>
-              </a>
-            </li>
           </ul>
+        </div>
+        <div class="navbar-header navbar-right">
+          <a
+            href="#"
+            onClick="return false;"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+            aria-expanded="false"
+          ></a>
+          <a href="#" onClick="return false;" class="bars"></a>
+          <a href="#" onClick="return false;" class="bar_nav sidemenu-collapse"
+            ><i class="nav-hdr-btn ti-menu" style="color: #000;"></i
+          ></a>
+          <a class="navbar-brand nav_float" href="#">
+            <img
+              src="../../assets/images/Startroom_Final logo-01_1.png"
+              alt=""
+            />
+            <!-- <span class="logo-name">Img</span> -->
+          </a>
         </div>
       </div>
     </nav>
@@ -993,7 +1000,7 @@
           </div>
           <div class="modal-body">
             <div>
-              <ul>
+              <ul style="text-align: right;">
                 <li>
                   <i class="fa fa-dot-circle-o" aria-hidden="true"></i> Tax
                   policy (tax rates and incentives)
@@ -1024,11 +1031,18 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">
-              Close
-            </button>
+            <div class="row">
+              <div class="form-group col-lg-8 col-md-8 col-sm-12"></div>
+              <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                <button
+                  type="button"
+                  class="btn custom-form-control btn-custom-secondary"
+                  data-dismiss="modal"
+                >
+                  <i class="fas fa-ban"></i> Close
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1060,18 +1074,26 @@
               <option value="3">Option 3</option>
             </select>
 
-            <button
-              type="button"
-              class="form-control add"
-              style="background-color: #1e252d; color: #fff;"
-            >
-              Save
-            </button>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">
-              Close
-            </button>
+            <div class="row">
+              <div class="form-group col-lg-4 col-md-4 col-sm-12"></div>
+              <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                <button
+                  type="button"
+                  class="btn custom-form-control btn-custom-secondary"
+                  data-dismiss="modal"
+                >
+                  <i class="fas fa-ban"></i> Close
+                </button>
+              </div>
+              <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                <button
+                  type="button"
+                  class="btn custom-form-control btn-custom-primary"
+                >
+                  <i class="fas fa-check"></i> Submit
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1080,15 +1102,12 @@
     <section class="content">
       <!-- Page Header -->
       <div class="page-header row no-gutters py-2 m-t--70">
-        <div class="col-lg-6 col-md-6 text-center text-sm-left pt-2 mb-0 ml-4">
-          <h5
-            class="page-title"
-            style="font-weight: 600; text-transform: uppercase;"
-          >
+        <div class="col-lg-6 col-md-6 pt-2 mb-0 mr-4">
+          <h5 class="page-title">
             Overview - SWOT ANALYSIS
           </h5>
         </div>
-        <div class="col-lg-6 col-md-6 employe_head_info_icon pr-4 pt-2">
+        <div class="col-lg-6 col-md-6 employe_head_info_icon pl-4 pt-1">
           <i
             class="fas fa-paperclip title_edit_icon pull-right"
             style="color: #fff;"
@@ -1142,18 +1161,18 @@
                             Strenghts
                           </h6>
                           <button
-                            class="addbtnz green_form btnfll"
+                            class="btn btn-custom-secondary pull-right"
                             onclick="addRow('dataTable')"
+                            style="margin-left: 2px;"
                           >
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                            <b>Add </b>
+                            <i class="fas fa-plus"></i>
                           </button>
                           <button
-                            class="addbtnz red_form btnfll"
+                            class="btn btn-custom-secondary pull-right"
                             onclick="deleteRow('dataTable')"
+                            style="margin-left: 2px;"
                           >
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                            <b> Delete Row </b>
+                            <i class="fas fa-trash"></i>
                           </button>
                         </td>
                       </tr>
@@ -1330,18 +1349,18 @@
                             Weaknesses
                           </h6>
                           <button
-                            class="addbtnz green_form btnfll"
+                            class="btn btn-custom-secondary pull-right"
                             onclick="addRow2('dataTable2')"
+                            style="margin-left: 2px;"
                           >
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                            <b>Add </b>
+                            <i class="fas fa-plus"></i>
                           </button>
                           <button
-                            class="addbtnz red_form btnfll"
+                            class="btn btn-custom-secondary pull-right"
                             onclick="deleteRow2('dataTable2')"
+                            style="margin-left: 2px;"
                           >
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                            <b> Delete Row </b>
+                            <i class="fas fa-trash"></i>
                           </button>
                         </td>
                       </tr>
@@ -1518,18 +1537,18 @@
                             Oppurtunities
                           </h6>
                           <button
-                            class="addbtnz green_form btnfll"
+                            class="btn btn-custom-secondary pull-right"
                             onclick="addRow3('dataTable3')"
+                            style="margin-left: 2px;"
                           >
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                            <b>Add </b>
+                            <i class="fas fa-plus"></i>
                           </button>
                           <button
-                            class="addbtnz red_form btnfll"
+                            class="btn btn-custom-secondary pull-right"
                             onclick="deleteRow3('dataTable3')"
+                            style="margin-left: 2px;"
                           >
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                            <b> Delete Row </b>
+                            <i class="fas fa-trash"></i>
                           </button>
                         </td>
                       </tr>
@@ -1706,18 +1725,18 @@
                         <td>
                           <h6 class="h6m0" style="">Threats</h6>
                           <button
-                            class="addbtnz green_form btnfll"
+                            class="btn btn-custom-secondary pull-right"
                             onclick="addRow4('dataTable4')"
+                            style="margin-left: 2px;"
                           >
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                            <b>Add </b>
+                            <i class="fas fa-plus"></i>
                           </button>
                           <button
-                            class="addbtnz red_form btnfll"
+                            class="btn btn-custom-secondary pull-right"
                             onclick="deleteRow4('dataTable4')"
+                            style="margin-left: 2px;"
                           >
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                            <b> Delete Row </b>
+                            <i class="fas fa-trash"></i>
                           </button>
                         </td>
                       </tr>
@@ -1999,25 +2018,27 @@
             <div class="modal-body">
               <form>
                 <textarea class="form-control" rows="4" cols="80"> </textarea>
-                <div class="text-right color-white">
-                  <br />
-                  <input
-                    class="btn green_btn"
-                    style="background-color: #1e252d; color: #fff;"
-                    type="submit"
-                    value="Submit"
-                  />
+                <div class="row">
+                  <div class="form-group col-lg-4 col-md-4 col-sm-12"></div>
+                  <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                    <button
+                      type="button"
+                      class="btn custom-form-control btn-custom-secondary"
+                      data-dismiss="modal"
+                    >
+                      <i class="fas fa-ban"></i> Close
+                    </button>
+                  </div>
+                  <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                    <button
+                      type="button"
+                      class="btn custom-form-control btn-custom-primary"
+                    >
+                      <i class="fas fa-check"></i> Submit
+                    </button>
+                  </div>
                 </div>
               </form>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
             </div>
           </div>
         </div>
@@ -2566,4 +2587,4 @@
       });
     </script>
   </body>
-</a>
+</html>

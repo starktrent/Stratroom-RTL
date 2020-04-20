@@ -67,6 +67,11 @@
         left: auto !important;
         position: fixed;
       }
+
+      label {
+        width: 100%;
+        text-align: right;
+      }
     </style>
   </head>
 
@@ -969,19 +974,18 @@
                 <tr>
                   <td>
                     <button
-                      class="addbtnz green_form btnfll pull-right"
+                      class="btn btn-custom-secondary pull-right"
                       onclick="addRow('dataTable')"
+                      style="margin-left: 2px;"
                     >
-                      <i class="fa fa-plus" aria-hidden="true"></i>
-                      <b>Add Meeting</b>
+                      <i class="fas fa-plus"></i>
                     </button>
-
                     <button
-                      class="addbtnz red_form btnfll pull-right"
+                      class="btn btn-custom-secondary pull-right"
                       onclick="deleteRow('dataTable')"
+                      style="margin-left: 2px;"
                     >
-                      <i class="fa fa-trash" aria-hidden="true"></i>
-                      <b> Delete Row </b>
+                      <i class="fas fa-trash"></i>
                     </button>
                   </td>
                   <td></td>
@@ -1159,7 +1163,7 @@
                         </a>
                       </td>
                       <td class="pt-4">
-                        <label for="file-input1"
+                        <label for="file-input1" style="text-align: center;"
                           ><span class="favgs"
                             ><i
                               class="fa fa-paperclip fa-lg"
@@ -1328,22 +1332,26 @@
                   </tr>
                 </tbody>
               </table>
-              <button
-                type="button"
-                class="form-control add"
-                style="background-color: #1e252d; color: #fff;"
-              >
-                Save
-              </button>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
+              <div class="row">
+                <div class="form-group col-md-4"></div>
+                <div class="form-group col-md-4">
+                  <button
+                    type="button"
+                    class="btn custom-form-control btn-custom-primary"
+                  >
+                    <i class="fas fa-check"></i> Save
+                  </button>
+                </div>
+                <div class="form-group col-md-4">
+                  <button
+                    type="button"
+                    class="btn custom-form-control btn-custom-secondary"
+                    data-dismiss="modal"
+                  >
+                    <i class="fas fa-ban"></i> Close
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1484,22 +1492,26 @@
                   </tr>
                 </tbody>
               </table>
-              <button
-                type="button"
-                class="form-control add"
-                style="background-color: #1e252d; color: #fff;"
-              >
-                Save
-              </button>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
+              <div class="row">
+                <div class="form-group col-md-8"></div>
+                <div class="form-group col-md-2">
+                  <button
+                    type="button"
+                    class="btn custom-form-control btn-custom-primary"
+                  >
+                    <i class="fas fa-check"></i> Save
+                  </button>
+                </div>
+                <div class="form-group col-md-2">
+                  <button
+                    type="button"
+                    class="btn custom-form-control btn-custom-secondary"
+                    data-dismiss="modal"
+                  >
+                    <i class="fas fa-ban"></i> Close
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1531,22 +1543,26 @@
                 <option value="3">Option 3</option>
               </select>
 
-              <button
-                type="button"
-                class="form-control add"
-                style="background-color: #1e252d; color: #fff;"
-              >
-                Save
-              </button>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
+              <div class="row">
+                <div class="form-group col-md-4"></div>
+                <div class="form-group col-md-4">
+                  <button
+                    type="button"
+                    class="btn custom-form-control btn-custom-primary"
+                  >
+                    <i class="fas fa-check"></i> Save
+                  </button>
+                </div>
+                <div class="form-group col-md-4">
+                  <button
+                    type="button"
+                    class="btn custom-form-control btn-custom-secondary"
+                    data-dismiss="modal"
+                  >
+                    <i class="fas fa-ban"></i> Close
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1675,7 +1691,7 @@
 
         var cell10 = row.insertCell(10);
         cell10.innerHTML =
-          "<label for='file-input1'><span class='favgs'><i class='fa fa-paperclip fa-lg' style='font-size:20px' aria-hidden='true'></i></span></label> <input id='file-input1' style='display:none' type='file'/>";
+          "<label for='file-input1' style='text-align: center;'><span class='favgs'><i class='fa fa-paperclip fa-lg' style='font-size:20px' aria-hidden='true'></i></span></label> <input id='file-input1' style='display:none' type='file'/>";
 
         var cell11 = row.insertCell(11);
         cell11.innerHTML =

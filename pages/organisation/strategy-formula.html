@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<a lang="en">
+<html dir="rtl" lang="ar">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -67,6 +67,11 @@
         left: auto !important;
         position: fixed;
       }
+
+      label {
+        width: 100%;
+        text-align: right;
+      }
     </style>
   </head>
 
@@ -90,30 +95,67 @@
     <!-- Top Bar -->
     <nav class="navbar">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <a
-            href="#"
-            onClick="return false;"
-            class="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#navbar-collapse"
-            aria-expanded="false"
-          ></a>
-          <a href="#" onClick="return false;" class="bars"></a>
-          <a href="#" onClick="return false;" class="bar_nav sidemenu-collapse"
-            ><i class="nav-hdr-btn ti-menu" style="color: #000;"></i
-          ></a>
-          <a class="navbar-brand nav_float" href="#">
-            <img
-              src="../../assets/images/Startroom_Final logo-01_1.png"
-              alt=""
-            />
-            <!-- <span class="logo-name">Img</span> -->
-          </a>
-        </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="fullscreen" style="padding: 4px; left: -14px;">
+          <ul class="nav navbar-nav">
+            <li class="">
+              <a
+                href="#"
+                onclick="return false;"
+                class="dropdown-toggle js-right-sidebar"
+                data-close="true"
+              >
+                <!-- <img src="../../assets/images/user.jpg" alt="user"> -->
+                <i class="fas fa-user-circle"></i>
+              </a>
+            </li>
+            <!-- #START# Notifications-->
+            <li class="dropdown">
+              <a
+                href="#"
+                onClick="return false;"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+              >
+                <i class="nav-hdr-btn ti-bell" style="color: gray;"></i>
+                <span class="notify"></span>
+                <span class="heartbeat"></span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a
+                href="#"
+                onClick="return false;"
+                data-toggle="modal"
+                data-target="#settings"
+                role="button"
+              >
+                <i class="nav-hdr-btn ti-settings" style="color: gray;"></i>
+                <span class="notify"></span>
+                <span class="heartbeat"></span>
+              </a>
+            </li>
+            <!-- #END# Notifications-->
+            <li class="fullscreen">
+              <!-- <i class="nav-hdr-btn ti-calendar" style="color: gray"></i> -->
+              <input class="daterangepicker-field top_datepicker" />
+            </li>
+            <!-- #END# Full Screen Button -->
+            <li class="fullscreen">
+              <form class="form-header" action="" method="POST">
+                <input
+                  class="au-input au-input--xl"
+                  style="min-width: 20%;"
+                  type="text"
+                  name="search"
+                  placeholder="Search"
+                />
+                <button class="au-btn--submit" type="submit">
+                  <i class="fa fa-search" style="color: gray;"></i>
+                </button>
+              </form>
+            </li>
+            <li class="fullscreen" style="padding: 4px;">
               <ul class="list-unstyled order-list">
                 <li class="avatar avatar-sm">
                   <img
@@ -148,65 +190,28 @@
                 </li>
               </ul>
             </li>
-            <li class="fullscreen">
-              <form class="form-header" action="" method="POST">
-                <input
-                  class="au-input au-input--xl"
-                  style="min-width: 20%;"
-                  type="text"
-                  name="search"
-                  placeholder="Search"
-                />
-                <button class="au-btn--submit" type="submit">
-                  <i class="fa fa-search" style="color: gray;"></i>
-                </button>
-              </form>
-            </li>
-            <li class="fullscreen">
-              <!-- <i class="nav-hdr-btn ti-calendar" style="color: gray"></i> -->
-              <input class="daterangepicker-field top_datepicker" />
-            </li>
-            <!-- #END# Full Screen Button -->
-            <!-- #START# Notifications-->
-            <li class="dropdown">
-              <a
-                href="#"
-                onClick="return false;"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-              >
-                <i class="nav-hdr-btn ti-bell" style="color: gray;"></i>
-                <span class="notify"></span>
-                <span class="heartbeat"></span>
-              </a>
-            </li>
-            <li class="dropdown">
-              <a
-                href="#"
-                onClick="return false;"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-              >
-                <i class="nav-hdr-btn ti-settings" style="color: gray;"></i>
-                <span class="notify"></span>
-                <span class="heartbeat"></span>
-              </a>
-            </li>
-            <!-- #END# Notifications-->
-            <li class="">
-              <a
-                href="#"
-                onclick="return false;"
-                class="dropdown-toggle js-right-sidebar"
-                data-close="true"
-              >
-                <!-- <img src="../../assets/images/user.jpg" alt="user"> -->
-                <i class="fas fa-user-circle"></i>
-              </a>
-            </li>
           </ul>
+        </div>
+        <div class="navbar-header navbar-right">
+          <a
+            href="#"
+            onClick="return false;"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+            aria-expanded="false"
+          ></a>
+          <a href="#" onClick="return false;" class="bars"></a>
+          <a href="#" onClick="return false;" class="bar_nav sidemenu-collapse"
+            ><i class="nav-hdr-btn ti-menu" style="color: #000;"></i
+          ></a>
+          <a class="navbar-brand nav_float" href="#">
+            <img
+              src="../../assets/images/Startroom_Final logo-01_1.png"
+              alt=""
+            />
+            <!-- <span class="logo-name">Img</span> -->
+          </a>
         </div>
       </div>
     </nav>
@@ -1006,15 +1011,9 @@
 
     <section class="content">
       <!-- Page Header -->
-      <div
-        class="page-header row no-gutters py-2 m-t--60"
-        style="margin-bottom: 8px !important;"
-      >
-        <div class="col-lg-6 col-md-6 text-center text-sm-left pt-2 mb-0 ml-4">
-          <h5
-            class="page-title"
-            style="font-weight: 600; text-transform: uppercase;"
-          >
+      <div class="page-header row no-gutters py-2 m-t--70">
+        <div class="col-lg-12 col-md-12 pt-2 mb-0 mr-4">
+          <h5 class="page-title">
             Overview - Strategy Formulation
           </h5>
         </div>
@@ -1026,12 +1025,15 @@
         <div class="card-body p-0 pb-3">
           <div class="form-row mt-5 mb-4 ml-4">
             <div class="form-group col-md-3">
-              <label for="blog-overview-date-range"
+              <label
+                for="blog-overview-date-range"
+                style="margin-right: 20px !important;"
                 >Strategic Plan Period</label
               >
               <div
                 id="blog-overview-date-range"
-                class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0 pt-2"
+                class="input-daterange input-group input-group-sm my-auto mr-sm-auto ml-sm-0 pt-2"
+                style="margin-right: 20px !important;"
               >
                 <input
                   class="form-control datepicker-stat"
@@ -1182,15 +1184,9 @@
       <!-- End Default Light Table -->
 
       <!-- Page Header -->
-      <div
-        class="page-header row no-gutters py-2 m-t-20"
-        style="margin-bottom: 8px !important;"
-      >
-        <div class="col-lg-6 col-md-6 text-center text-sm-left pt-2 mb-0 ml-4">
-          <h5
-            class="page-title"
-            style="font-weight: 600; text-transform: uppercase;"
-          >
+      <div class="page-header row no-gutters py-2 m-t-10">
+        <div class="col-lg-12 col-md-12 pt-2 mb-0 mr-4">
+          <h5 class="page-title">
             Overview - Corporate Strategy
           </h5>
         </div>
@@ -1298,7 +1294,11 @@
                     <div class="col-md-10">
                       <label
                         for="plan_type"
-                        style="font-size: 15px; color: #222;"
+                        style="
+                          font-size: 15px;
+                          color: #222;
+                          margin-right: 10px !important;
+                        "
                         >Objectives</label
                       >
                     </div>
@@ -1322,7 +1322,7 @@
                         type="text"
                         class="form-control browser-default"
                         placeholder="ID"
-                        style="height: 47px;"
+                        style="height: 47px; margin-right: 10px !important;"
                       />
                     </div>
                     <div class="col-md-10 form-group">
@@ -1475,7 +1475,11 @@
                       <div class="col-md-10">
                         <label
                           for="plan_type"
-                          style="font-size: 15px; color: #222;"
+                          style="
+                            font-size: 15px;
+                            color: #222;
+                            margin-right: 10px !important;
+                          "
                           >Objectives</label
                         >
                       </div>
@@ -1499,7 +1503,7 @@
                           type="text"
                           class="form-control browser-default"
                           placeholder="ID"
-                          style="height: 47px;"
+                          style="height: 47px; margin-right: 10px !important;"
                         />
                       </div>
                       <div class="col-md-10 form-group">
@@ -1654,7 +1658,11 @@
                       <div class="col-md-10">
                         <label
                           for="plan_type"
-                          style="font-size: 15px; color: #222;"
+                          style="
+                            font-size: 15px;
+                            color: #222;
+                            margin-right: 10px !important;
+                          "
                           >Objectives</label
                         >
                       </div>
@@ -1678,7 +1686,7 @@
                           type="text"
                           class="form-control browser-default"
                           placeholder="ID"
-                          style="height: 47px;"
+                          style="height: 47px; margin-right: 10px !important;"
                         />
                       </div>
                       <div class="col-md-10 form-group">
@@ -1956,16 +1964,16 @@
 
       function objective(divID) {
         var div = document.getElementById(divID);
-        div.innerHTML += `<hr/><div class="row mt-2 ml-4"> <div class="col-md-4"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">Objectives</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="obj1()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle pull-right" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="obj1"> <div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-10 form-group"> <textarea class="form-control browser-default" placeholder="" cols="" rows="2"></textarea> </div></div></div><div class="col-md-8"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">KPI'S</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="initiative1()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="initiative1"> <div class="col-md-1 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-5 form-group"> <textarea class="form-control browser-default" placeholder="" cols="2" rows="2"></textarea> </div><div class="col-md-2 form-group"> <select id="plan_type" class="form-control" style="height: 47px;"> <option value=""> Frequency</option> <option value=""> Daily</option> <option value=""> Weekly</option> <option value=""> Monthly</option> <option value=""> Annual</option> </select> </div><div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="Target" style="height: 47px;"> </div><div class="col-md-2 form-group" style="margin-top: 10px;"> <ul class="list-unstyled order-list d-flex"> <li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user9.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user8.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <span _ngcontent-hhc-c5="" class="badge">+3</span> </li><div class="image-upload"> <label for="file-input"> <li _ngcontent-hhc-c5="" class="avatar avatar-sm"> <a href="#" class="favgs" data-toggle="modal" data-target="#addpeople"> <span _ngcontent-hhc-c5="" class="badge">+<span id="count"> </span></span> </a> </li></label> </div></ul> </div></div></div></div>`;
+        div.innerHTML += `<hr/><div class="row mt-2 ml-4"> <div class="col-md-4"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222; margin-right: 10px !important;">Objectives</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="obj1()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle pull-right" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="obj1"> <div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px; margin-right: 10px !important;"> </div><div class="col-md-10 form-group"> <textarea class="form-control browser-default" placeholder="" cols="" rows="2"></textarea> </div></div></div><div class="col-md-8"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">KPI'S</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="initiative1()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="initiative1"> <div class="col-md-1 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-5 form-group"> <textarea class="form-control browser-default" placeholder="" cols="2" rows="2"></textarea> </div><div class="col-md-2 form-group"> <select id="plan_type" class="form-control" style="height: 47px;"> <option value=""> Frequency</option> <option value=""> Daily</option> <option value=""> Weekly</option> <option value=""> Monthly</option> <option value=""> Annual</option> </select> </div><div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="Target" style="height: 47px;"> </div><div class="col-md-2 form-group" style="margin-top: 10px;"> <ul class="list-unstyled order-list d-flex"> <li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user9.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user8.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <span _ngcontent-hhc-c5="" class="badge">+3</span> </li><div class="image-upload"> <label for="file-input"> <li _ngcontent-hhc-c5="" class="avatar avatar-sm"> <a href="#" class="favgs" data-toggle="modal" data-target="#addpeople"> <span _ngcontent-hhc-c5="" class="badge">+<span id="count"> </span></span> </a> </li></label> </div></ul> </div></div></div></div>`;
       }
       function objective_first(divID) {
         var div = document.getElementById(divID);
-        div.innerHTML += `<hr/><div class="row mt-2 ml-4"> <div class="col-md-4"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">Objectives</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="obj2()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle pull-right" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="obj2"> <div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-10 form-group"> <textarea class="form-control browser-default" placeholder="" cols="" rows="2"></textarea> </div></div></div><div class="col-md-8"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">KPI'S</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="kpi1()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="kpi1"> <div class="col-md-1 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-5 form-group"> <textarea class="form-control browser-default" placeholder="" cols="2" rows="2"></textarea> </div><div class="col-md-2 form-group"> <select id="plan_type" class="form-control" style="height: 47px;"> <option value=""> Frequency</option> <option value=""> Daily</option> <option value=""> Weekly</option> <option value=""> Monthly</option> <option value=""> Annual</option> </select> </div><div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="Target" style="height: 47px;"> </div><div class="col-md-2 form-group" style="margin-top: 10px;"> <ul class="list-unstyled order-list d-flex"> <li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user9.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user8.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <span _ngcontent-hhc-c5="" class="badge">+3</span> </li><div class="image-upload"> <label for="file-input"> <li _ngcontent-hhc-c5="" class="avatar avatar-sm"> <a href="#" class="favgs" data-toggle="modal" data-target="#addpeople"> <span _ngcontent-hhc-c5="" class="badge">+<span id="count"> </span></span> </a> </li></label> </div></ul> </div></div></div></div>`;
+        div.innerHTML += `<hr/><div class="row mt-2 ml-4"> <div class="col-md-4"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222; margin-right: 10px !important;">Objectives</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="obj2()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle pull-right" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="obj2"> <div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px; margin-right: 10px !important;"> </div><div class="col-md-10 form-group"> <textarea class="form-control browser-default" placeholder="" cols="" rows="2"></textarea> </div></div></div><div class="col-md-8"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">KPI'S</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="kpi1()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="kpi1"> <div class="col-md-1 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-5 form-group"> <textarea class="form-control browser-default" placeholder="" cols="2" rows="2"></textarea> </div><div class="col-md-2 form-group"> <select id="plan_type" class="form-control" style="height: 47px;"> <option value=""> Frequency</option> <option value=""> Daily</option> <option value=""> Weekly</option> <option value=""> Monthly</option> <option value=""> Annual</option> </select> </div><div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="Target" style="height: 47px;"> </div><div class="col-md-2 form-group" style="margin-top: 10px;"> <ul class="list-unstyled order-list d-flex"> <li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user9.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user8.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <span _ngcontent-hhc-c5="" class="badge">+3</span> </li><div class="image-upload"> <label for="file-input"> <li _ngcontent-hhc-c5="" class="avatar avatar-sm"> <a href="#" class="favgs" data-toggle="modal" data-target="#addpeople"> <span _ngcontent-hhc-c5="" class="badge">+<span id="count"> </span></span> </a> </li></label> </div></ul> </div></div></div></div>`;
       }
 
       function objective_extra(divID) {
         var div = document.getElementById(divID);
-        div.innerHTML += `<hr/><div class="row mt-2 ml-4"> <div class="col-md-4"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">Objectives</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="obj3()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle pull-right" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="obj3"> <div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-10 form-group"> <textarea class="form-control browser-default" placeholder="" cols="" rows="2"></textarea> </div></div></div><div class="col-md-8"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">KPI'S</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="kpi3()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="kpi3"> <div class="col-md-1 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-5 form-group"> <textarea class="form-control browser-default" placeholder="" cols="2" rows="2"></textarea> </div><div class="col-md-2 form-group"> <select id="plan_type" class="form-control" style="height: 47px;"> <option value=""> Frequency</option> <option value=""> Daily</option> <option value=""> Weekly</option> <option value=""> Monthly</option> <option value=""> Annual</option> </select> </div><div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="Target" style="height: 47px;"> </div><div class="col-md-2 form-group" style="margin-top: 10px;"> <ul class="list-unstyled order-list d-flex"> <li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user9.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user8.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <span _ngcontent-hhc-c5="" class="badge">+3</span> </li><div class="image-upload"> <label for="file-input"> <li _ngcontent-hhc-c5="" class="avatar avatar-sm"> <a href="#" class="favgs" data-toggle="modal" data-target="#addpeople"> <span _ngcontent-hhc-c5="" class="badge">+<span id="count"> </span></span> </a> </li></label> </div></ul> </div></div></div></div>`;
+        div.innerHTML += `<hr/><div class="row mt-2 ml-4"> <div class="col-md-4"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222; margin-right: 10px !important;">Objectives</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="obj3()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle pull-right" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="obj3"> <div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px; margin-right: 10px !important;"> </div><div class="col-md-10 form-group"> <textarea class="form-control browser-default" placeholder="" cols="" rows="2"></textarea> </div></div></div><div class="col-md-8"> <div class="row"> <div class="col-md-10"> <label for="plan_type" style="font-size: 15px; color: #222;">KPI'S</label> </div><div class="col-md-2"> <button id="btn_copy" onclick="kpi3()" class="form-control" style="border: none;"> <i class="fas fa-plus-circle" style="font-size: 18px; color:#1e252d"></i> </button> </div></div><div class="form-row mt-4" id="kpi3"> <div class="col-md-1 form-group"> <input type="text" class="form-control browser-default" placeholder="ID" style="height: 47px;"> </div><div class="col-md-5 form-group"> <textarea class="form-control browser-default" placeholder="" cols="2" rows="2"></textarea> </div><div class="col-md-2 form-group"> <select id="plan_type" class="form-control" style="height: 47px;"> <option value=""> Frequency</option> <option value=""> Daily</option> <option value=""> Weekly</option> <option value=""> Monthly</option> <option value=""> Annual</option> </select> </div><div class="col-md-2 form-group"> <input type="text" class="form-control browser-default" placeholder="Target" style="height: 47px;"> </div><div class="col-md-2 form-group" style="margin-top: 10px;"> <ul class="list-unstyled order-list d-flex"> <li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user9.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <img class="rounded-circle sub_init_img" src="../../assets/images/user/user8.jpg" alt="user" width="50"> </li><li class="avatar avatar-sm"> <span _ngcontent-hhc-c5="" class="badge">+3</span> </li><div class="image-upload"> <label for="file-input"> <li _ngcontent-hhc-c5="" class="avatar avatar-sm"> <a href="#" class="favgs" data-toggle="modal" data-target="#addpeople"> <span _ngcontent-hhc-c5="" class="badge">+<span id="count"> </span></span> </a> </li></label> </div></ul> </div></div></div></div>`;
       }
     </script>
 
@@ -2055,4 +2063,4 @@
       });
     </script>
   </body>
-</a>
+</html>

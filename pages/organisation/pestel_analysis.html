@@ -84,6 +84,13 @@
       .LEGAL {
         color: #356160;
       }
+      tbody tr td a .fa-plus {
+        float: none;
+      }
+      label {
+        width: 100%;
+        text-align: right;
+      }
     </style>
   </head>
 
@@ -969,7 +976,6 @@
 
     <section class="content">
       <!-- Page Header -->
-      <!-- Page Header -->
       <div class="page-header row no-gutters py-2 m-t--70">
         <div class="col-lg-6 col-md-6 pt-2 mb-0 mr-4">
           <h5 class="page-title">
@@ -996,24 +1002,21 @@
                 <tr>
                   <td>
                     <h6 class="h6m0 pull-right">Factors</h6>
-
                     <button
-                      class="addbtnz green_form btnfll pull-right"
+                      class="btn btn-custom-secondary pull-right"
                       onclick="addRow('dataTable')"
+                      style="margin-left: 2px;"
                     >
-                      <i class="fa fa-plus" aria-hidden="true"></i> <b>Add </b>
+                      <i class="fas fa-plus"></i>
                     </button>
-
                     <button
-                      class="addbtnz red_form btnfll pull-right"
+                      class="btn btn-custom-secondary pull-right"
                       onclick="deleteRow('dataTable')"
+                      style="margin-left: 2px;"
                     >
-                      <i class="fa fa-trash" aria-hidden="true"></i>
-                      <b> Delete Row </b>
+                      <i class="fas fa-trash"></i>
                     </button>
                   </td>
-
-                  <td></td>
                 </tr>
               </table>
             </div>
@@ -1177,11 +1180,7 @@
                         </div>
                       </td>
                       <td>
-                        <input
-                          class="form-control"
-                          id="datepicker1"
-                          width="120px"
-                        />
+                        <input class="form-control" id="datepicker1" />
                         <script>
                           console.log();
                           $("#datepicker1").datepicker();
@@ -1356,11 +1355,7 @@
                         </div>
                       </td>
                       <td>
-                        <input
-                          class="form-control"
-                          id="datepicker2"
-                          width="120px"
-                        />
+                        <input class="form-control" id="datepicker2" />
                         <script>
                           console.log();
                           $("#datepicker2").datepicker();
@@ -1431,22 +1426,26 @@
                 <option value="3">Option 3</option>
               </select>
 
-              <button
-                type="button"
-                class="form-control add"
-                style="background-color: #1e252d; color: #fff;"
-              >
-                Save
-              </button>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
+              <div class="row">
+                <div class="form-group col-lg-4 col-md-4 col-sm-12"></div>
+                <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                  <button
+                    type="button"
+                    class="btn custom-form-control btn-custom-secondary"
+                    data-dismiss="modal"
+                  >
+                    <i class="fas fa-ban"></i> Close
+                  </button>
+                </div>
+                <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                  <button
+                    type="button"
+                    class="btn custom-form-control btn-custom-primary"
+                  >
+                    <i class="fas fa-check"></i> Submit
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -2017,25 +2016,28 @@
               <form>
                 <label> Impacts</label>
                 <textarea class="form-control" rows="4" cols="80"> </textarea>
-
-                <div class="text-right color-white">
-                  <br /><input
-                    style="background-color: #1e252d; color: #fff;"
-                    class="btn"
-                    type="submit"
-                    value="Submit"
-                  />
-                </div>
               </form>
             </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
+
+            <div class="row">
+              <div class="form-group col-lg-4 col-md-4 col-sm-12"></div>
+              <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                <button
+                  type="button"
+                  class="btn custom-form-control btn-custom-secondary"
+                  data-dismiss="modal"
+                >
+                  <i class="fas fa-ban"></i> Close
+                </button>
+              </div>
+              <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                <button
+                  type="button"
+                  class="btn custom-form-control btn-custom-primary"
+                >
+                  <i class="fas fa-check"></i> Submit
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -2056,25 +2058,27 @@
               <form>
                 <label> Recommendations</label>
                 <textarea class="form-control" rows="4" cols="80"> </textarea>
-
-                <div class="text-right color-white">
-                  <br /><input
-                    style="background-color: #1e252d; color: #fff;"
-                    class="btn"
-                    type="submit"
-                    value="Submit"
-                  />
-                </div>
               </form>
             </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
+            <div class="row">
+              <div class="form-group col-lg-4 col-md-4 col-sm-12"></div>
+              <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                <button
+                  type="button"
+                  class="btn custom-form-control btn-custom-secondary"
+                  data-dismiss="modal"
+                >
+                  <i class="fas fa-ban"></i> Close
+                </button>
+              </div>
+              <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                <button
+                  type="button"
+                  class="btn custom-form-control btn-custom-primary"
+                >
+                  <i class="fas fa-check"></i> Save
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -2090,7 +2094,7 @@
             </div>
             <div class="modal-body">
               <div>
-                <ul>
+                <ul style="text-align: right;">
                   <li>
                     <i class="fa fa-dot-circle-o" aria-hidden="true"></i> Tax
                     policy (tax rates and incentives)
@@ -2122,14 +2126,17 @@
                 </ul>
               </div>
             </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
+            <div class="row">
+              <div class="form-group col-lg-8 col-md-8 col-sm-12"></div>
+              <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                <button
+                  type="button"
+                  class="btn custom-form-control btn-custom-secondary"
+                  data-dismiss="modal"
+                >
+                  <i class="fas fa-ban"></i> Close
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -2145,7 +2152,7 @@
             </div>
             <div class="modal-body">
               <div>
-                <ul>
+                <ul style="text-align: right;">
                   <li>
                     <i class="fa fa-dot-circle-o" aria-hidden="true"></i> Tax
                     policy (tax rates and incentives)
@@ -2177,14 +2184,17 @@
                 </ul>
               </div>
             </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
+            <div class="row">
+              <div class="form-group col-lg-8 col-md-8 col-sm-12"></div>
+              <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                <button
+                  type="button"
+                  class="btn custom-form-control btn-custom-secondary"
+                  data-dismiss="modal"
+                >
+                  <i class="fas fa-ban"></i> Close
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -2218,6 +2228,7 @@
                       ><img
                         src="images/flag-green.png"
                         alt="status"
+                        style="float: left;"
                         width="23px"
                         height="23px"
                     /></label>
@@ -2233,6 +2244,7 @@
                       ><img
                         src="images/flag-orange.png"
                         alt="status"
+                        style="float: left;"
                         width="23px"
                         height="23px"
                     /></label>
@@ -2248,30 +2260,34 @@
                       ><img
                         src="images/flag-red.png"
                         alt="status"
+                        style="float: left;"
                         width="23px"
                         height="23px"
                     /></label>
                   </div>
                 </div>
                 <br />
-
-                <button
-                  type="button"
-                  class="form-control add"
-                  style="background-color: #1e252d; color: #fff;"
-                >
-                  Submit
-                </button>
+                <div class="row">
+                  <div class="form-group col-lg-4 col-md-4 col-sm-12"></div>
+                  <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                    <button
+                      type="button"
+                      class="btn custom-form-control btn-custom-secondary"
+                      data-dismiss="modal"
+                    >
+                      <i class="fas fa-ban"></i> Close
+                    </button>
+                  </div>
+                  <div class="form-group col-lg-4 col-md-4 col-sm-6">
+                    <button
+                      type="button"
+                      class="btn custom-form-control btn-custom-primary"
+                    >
+                      <i class="fas fa-check"></i> Submit
+                    </button>
+                  </div>
+                </div>
               </form>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
             </div>
           </div>
         </div>
