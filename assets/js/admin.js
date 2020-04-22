@@ -253,11 +253,11 @@ function initiativeBar() {
     !$body.hasClass("ini-hide") &&
     !$body.hasClass("ini-show")
   ) {
-    $("#initiative_sidebar").css("left", "59px");
+    $("#initiative_sidebar").css("right", "59px");
     $("#section").css("margin-top", "34px");
-    $("#section").css("margin-right", "15px");
+    $("#section").css("margin-left", "15px");
     $("#section").css("margin-bottom", "0");
-    $("#section").css("margin-left", "313px");
+    $("#section").css("margin-right", "313px");
   } else if (
     $body.hasClass("side-closed") &&
     $body.hasClass("side-closed-hover") &&
@@ -265,11 +265,11 @@ function initiativeBar() {
     !$body.hasClass("ini-hide") &&
     !$body.hasClass("ini-show")
   ) {
-    $("#initiative_sidebar").css("left", "260px");
+    $("#initiative_sidebar").css("right", "260px");
     $("#section").css("margin-top", "34px");
-    $("#section").css("margin-right", "15px");
+    $("#section").css("margin-left", "15px");
     $("#section").css("margin-bottom", "0");
-    $("#section").css("margin-left", "514px"); //end default
+    $("#section").css("margin-right", "514px"); //end default
   } else if (
     $body.hasClass("submenu-closed") &&
     $body.hasClass("ini-hide") &&
@@ -285,11 +285,11 @@ function initiativeBar() {
     $body.hasClass("side-closed") &&
     $body.hasClass("ini-hide")
   ) {
-    $("#initiative_sidebar").css("left", "-260px");
+    $("#initiative_sidebar").css("right", "-260px");
     $("#section").css("margin-top", "34px");
-    $("#section").css("margin-right", "15px");
+    $("#section").css("margin-right", "68px");
     $("#section").css("margin-bottom", "0");
-    $("#section").css("margin-left", "75px");
+    $("#section").css("margin-left", "16px");
   } else if (
     $body.hasClass("ini-hide") &&
     !$body.hasClass("side-closed") &&
@@ -307,11 +307,11 @@ function initiativeBar() {
     !$body.hasClass("submenu-closed") &&
     $body.hasClass("side-closed")
   ) {
-    $("#initiative_sidebar").css("left", "-260px");
+    $("#initiative_sidebar").css("right", "-260px");
     $("#section").css("margin-top", "34px");
-    $("#section").css("margin-right", "15px");
+    $("#section").css("margin-left", "15px");
     $("#section").css("margin-bottom", "0");
-    $("#section").css("margin-left", "275px"); //end hide
+    $("#section").css("margin-right", "275px"); //end hide
   } else if (
     $body.hasClass("submenu-closed") &&
     $body.hasClass("ini-show") &&
@@ -327,11 +327,11 @@ function initiativeBar() {
     $body.hasClass("side-closed") &&
     $body.hasClass("ini-show")
   ) {
-    $("#initiative_sidebar").css("left", "60px");
+    $("#initiative_sidebar").css("right", "60px");
     $("#section").css("margin-top", "34px");
-    $("#section").css("margin-right", "15px");
+    $("#section").css("margin-left", "15px");
     $("#section").css("margin-bottom", "0");
-    $("#section").css("margin-left", "314px");
+    $("#section").css("margin-right", "314px");
   } else if (
     $body.hasClass("ini-show") &&
     !$body.hasClass("side-closed") &&
@@ -349,11 +349,11 @@ function initiativeBar() {
     !$body.hasClass("submenu-closed") &&
     $body.hasClass("side-closed")
   ) {
-    $("#initiative_sidebar").css("left", "260px");
+    $("#initiative_sidebar").css("right", "260px");
     $("#section").css("margin-top", "34px");
-    $("#section").css("margin-right", "15px");
+    $("#section").css("margin-left", "15px");
     $("#section").css("margin-bottom", "0");
-    $("#section").css("margin-left", "514px");
+    $("#section").css("margin-right", "514px");
   }
 }
 
