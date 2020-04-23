@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ar">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -11,7 +11,7 @@
     <link href="../../assets/css/app.min.css" rel="stylesheet" />
     <!-- Custom Css -->
     <link href="../../assets/css/style.css" rel="stylesheet" />
-    <!-- <link href="../../assets/css/startroom/wedgets.css" rel="stylesheet" /> -->
+    <link href="../../assets/css/startroom/wedgets.css" rel="stylesheet" />
     <link href="../../assets/css/startroom/org.css" rel="stylesheet" />
     <!-- You can choose a theme from css/styles instead of get all themes -->
     <link href="../../assets/css/styles/all-themes.css" rel="stylesheet" />
@@ -34,19 +34,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <style>
-      html,
-      body {
-        font-family: poppins;
-        color: #333333;
-        background-image: url(http://dabeng.github.io/OrgChart/img/background.jpg);
-      }
-
-      .orientation-right {
-        top: 60px !important;
-        right: 0 !important;
-        left: auto !important;
-        position: fixed;
-      }
     </style>
   </head>
 
@@ -71,30 +58,67 @@
     <!-- Top Bar -->
     <nav class="navbar">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <a
-            href="#"
-            onClick="return false;"
-            class="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#navbar-collapse"
-            aria-expanded="false"
-          ></a>
-          <a href="#" onClick="return false;" class="bars"></a>
-          <a href="#" onClick="return false;" class="bar_nav sidemenu-collapse"
-            ><i class="nav-hdr-btn ti-menu" style="color: #000;"></i
-          ></a>
-          <a class="navbar-brand nav_float" href="#">
-            <img
-              src="../../assets/images/Startroom_Final logo-01_1.png"
-              alt=""
-            />
-            <!-- <span class="logo-name">Img</span> -->
-          </a>
-        </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="fullscreen" style="padding: 4px; left: -14px;">
+          <ul class="nav navbar-nav">
+            <li class="">
+              <a
+                href="#"
+                onclick="return false;"
+                class="dropdown-toggle js-right-sidebar"
+                data-close="true"
+              >
+                <!-- <img src="../../assets/images/user.jpg" alt="user"> -->
+                <i class="fas fa-user-circle"></i>
+              </a>
+            </li>
+            <!-- #START# Notifications-->
+            <li class="dropdown">
+              <a
+                href="#"
+                onClick="return false;"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+              >
+                <i class="nav-hdr-btn ti-bell" style="color: gray;"></i>
+                <span class="notify"></span>
+                <span class="heartbeat"></span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a
+                href="#"
+                onClick="return false;"
+                data-toggle="modal"
+                data-target="#settings"
+                role="button"
+              >
+                <i class="nav-hdr-btn ti-settings" style="color: gray;"></i>
+                <span class="notify"></span>
+                <span class="heartbeat"></span>
+              </a>
+            </li>
+            <!-- #END# Notifications-->
+            <li class="fullscreen">
+              <!-- <i class="nav-hdr-btn ti-calendar" style="color: gray"></i> -->
+              <input class="daterangepicker-field top_datepicker" />
+            </li>
+            <!-- #END# Full Screen Button -->
+            <li class="fullscreen">
+              <form class="form-header" action="" method="POST">
+                <input
+                  class="au-input au-input--xl"
+                  style="min-width: 20%;"
+                  type="text"
+                  name="search"
+                  placeholder="Search"
+                />
+                <button class="au-btn--submit" type="submit">
+                  <i class="fa fa-search" style="color: gray;"></i>
+                </button>
+              </form>
+            </li>
+            <li class="fullscreen" style="padding: 4px;">
               <ul class="list-unstyled order-list">
                 <li class="avatar avatar-sm">
                   <img
@@ -129,72 +153,33 @@
                 </li>
               </ul>
             </li>
-            <li class="fullscreen">
-              <form class="form-header" action="" method="POST">
-                <input
-                  class="au-input au-input--xl"
-                  style="min-width: 20%;"
-                  type="text"
-                  name="search"
-                  placeholder="Search"
-                />
-                <button class="au-btn--submit" type="submit">
-                  <i class="fa fa-search" style="color: gray;"></i>
-                </button>
-              </form>
-            </li>
-            <li class="fullscreen">
-              <!-- <a href="" class=""> -->
-              <!-- <i class="nav-hdr-btn ti-calendar" style="color: gray"></i> -->
-              <!-- <input id="e4" name="e4"> -->
-              <input class="daterangepicker-field top_datepicker" />
-              <!-- </a> -->
-            </li>
-            <!-- #END# Full Screen Button -->
-            <!-- #START# Notifications-->
-            <li class="dropdown">
-              <a
-                href="#"
-                onClick="return false;"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-              >
-                <i class="nav-hdr-btn ti-bell" style="color: gray;"></i>
-                <span class="notify"></span>
-                <span class="heartbeat"></span>
-              </a>
-            </li>
-            <li class="dropdown">
-              <a
-                href="#"
-                onClick="return false;"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-              >
-                <i class="nav-hdr-btn ti-settings" style="color: gray;"></i>
-                <span class="notify"></span>
-                <span class="heartbeat"></span>
-              </a>
-            </li>
-            <!-- #END# Notifications-->
-            <li class="">
-              <a
-                href="#"
-                onclick="return false;"
-                class="dropdown-toggle js-right-sidebar"
-                data-close="true"
-              >
-                <!-- <img src="../../assets/images/user.jpg" alt="user"> -->
-                <i class="fas fa-user-circle"></i>
-              </a>
-            </li>
           </ul>
+        </div>
+        <div class="navbar-header navbar-right">
+          <a
+            href="#"
+            onClick="return false;"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+            aria-expanded="false"
+          ></a>
+          <a href="#" onClick="return false;" class="bars"></a>
+          <a href="#" onClick="return false;" class="bar_nav sidemenu-collapse"
+            ><i class="nav-hdr-btn ti-menu" style="color: #000;"></i
+          ></a>
+          <a class="navbar-brand nav_float" href="#">
+            <img
+              src="../../assets/images/Startroom_Final logo-01_1.png"
+              alt=""
+            />
+            <!-- <span class="logo-name">Img</span> -->
+          </a>
         </div>
       </div>
     </nav>
     <!-- #Top Bar -->
+
     <div>
       <!-- Left Sidebar -->
       <aside id="leftsidebar" class="sidebar">
@@ -203,14 +188,14 @@
           <ul class="list">
             <li class="active">
               <a href="#" onClick="return false;" class="">
-                <i class="menu-icon ti-home"></i>
+                <i class="menu-icon fa fa-home font_icon"></i>
                 <span>Organisation Structure</span>
               </a>
             </li>
 
             <li>
               <a href="#" onClick="return false;" class="menu-toggle">
-                <i class="menu-icon ti-image"></i>
+                <i class="menu-icon fa fa-dashboard font_icon"></i>
                 <span>Dashboards</span>
               </a>
               <ul class="ml-menu">
@@ -225,42 +210,42 @@
 
             <li class="">
               <a href="#" onClick="return false;" class="">
-                <i class="menu-icon ti-bar-chart"></i>
+                <i class="menu-icon fa fa-bar-chart font_icon"></i>
                 <span>Charts</span>
               </a>
             </li>
 
             <li class="">
               <a href="#" onClick="return false;" class="">
-                <i class="menu-icon ti-key"></i>
+                <i class="menu-icon fa fa-key font_icon"></i>
                 <span>Users & Access</span>
               </a>
             </li>
 
             <li class="">
               <a href="#" onClick="return false;" class="">
-                <i class="menu-icon ti-vector"></i>
+                <i class="menu-icon fa fa-sitemap font_icon"></i>
                 <span>Workflows</span>
               </a>
             </li>
 
             <li class="">
               <a href="#" onClick="return false;" class="">
-                <i class="menu-icon ti-bell"></i>
+                <i class="menu-icon fa fa-bell font_icon"></i>
                 <span>Notifications & Alerts</span>
               </a>
             </li>
 
             <li class="">
               <a href="#" onClick="return false;" class="">
-                <i class="menu-icon ti-server"></i>
+                <i class="menu-icon fa fa-database font_icon"></i>
                 <span>Data Management</span>
               </a>
             </li>
 
             <li>
               <a href="#" onClick="return false;" class="menu-toggle">
-                <i class="menu-icon ti-layout-media-right-alt"></i>
+                <i class="menu-icon fa fa-laptop font_icon"></i>
                 <span>Template Management</span>
               </a>
               <ul class="ml-menu">
@@ -318,21 +303,26 @@
                   <a href="#">Appraisal</a>
                 </li>
                 <li>
-                  <a href="#">Data Collection Form</a>
+                  <a
+                    href="#"
+                    data-toggle="modal"
+                    data-target=".data_collection_form"
+                    >Data Collection Form</a
+                  >
                 </li>
               </ul>
             </li>
 
             <li class="">
               <a href="#" onClick="return false;" class="">
-                <i class="menu-icon ti-home"></i>
+                <i class="menu-icon fa fa-columns font_icon"></i>
                 <span>Widget Management</span>
               </a>
             </li>
 
             <li class="">
               <a href="#" onClick="return false;" class="">
-                <i class="menu-icon ti-pie-chart"></i>
+                <i class="menu-icon fa fa-pie-chart font_icon"></i>
                 <span>Reports</span>
               </a>
             </li>
@@ -340,7 +330,8 @@
         </div>
         <!-- #Menu -->
       </aside>
-      <!-- #END# Left Sidebar -->
+    </div>
+    <!-- #END# Left Sidebar -->
       <!-- Right Sidebar -->
       <aside id="rightsidebar" class="right-sidebar open">
         <div class="tab-content">
@@ -1769,10 +1760,10 @@
       <!-- #END# Edit Org Structure Sidebar -->
 
       <button
-        class="btn pull-right"
+        class="btn pull-left"
         style="
           margin-top: -4%;
-          margin-right: 2%;
+          margin-left: 2%;
           background-color: #1e252d;
           color: #fff;
         "
@@ -1780,7 +1771,7 @@
         save
       </button>
       <section class="content">
-        <div class="container-fluid">
+        <div class="container-fluid" style="direction: ltr;">
           <div id="chart-container"></div>
         </div>
       </section>

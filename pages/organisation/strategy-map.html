@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ar">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -69,6 +69,7 @@
         font-size: 14px;
         font-weight: 600;
         color: #1e252d;
+        text-align: right;
       }
 
       .stMapHead h4 {
@@ -76,6 +77,7 @@
         font-size: 22px;
         line-height: 2rem;
         margin-top: -10px;
+        text-align: right;
       }
 
       .dropdown-item {
@@ -126,30 +128,67 @@
     <!-- Top Bar -->
     <nav class="navbar">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <a
-            href="#"
-            onClick="return false;"
-            class="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#navbar-collapse"
-            aria-expanded="false"
-          ></a>
-          <a href="#" onClick="return false;" class="bars"></a>
-          <a href="#" onClick="return false;" class="bar_nav sidemenu-collapse"
-            ><i class="nav-hdr-btn ti-menu" style="color: #000;"></i
-          ></a>
-          <a class="navbar-brand nav_float" href="#">
-            <img
-              src="../../assets/images/Startroom_Final logo-01_1.png"
-              alt=""
-            />
-            <!-- <span class="logo-name">Img</span> -->
-          </a>
-        </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="fullscreen" style="padding: 4px; left: -14px;">
+          <ul class="nav navbar-nav">
+            <li class="">
+              <a
+                href="#"
+                onclick="return false;"
+                class="dropdown-toggle js-right-sidebar"
+                data-close="true"
+              >
+                <!-- <img src="../../assets/images/user.jpg" alt="user"> -->
+                <i class="fas fa-user-circle"></i>
+              </a>
+            </li>
+            <!-- #START# Notifications-->
+            <li class="dropdown">
+              <a
+                href="#"
+                onClick="return false;"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+              >
+                <i class="nav-hdr-btn ti-bell" style="color: gray;"></i>
+                <span class="notify"></span>
+                <span class="heartbeat"></span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a
+                href="#"
+                onClick="return false;"
+                data-toggle="modal"
+                data-target="#settings"
+                role="button"
+              >
+                <i class="nav-hdr-btn ti-settings" style="color: gray;"></i>
+                <span class="notify"></span>
+                <span class="heartbeat"></span>
+              </a>
+            </li>
+            <!-- #END# Notifications-->
+            <li class="fullscreen">
+              <!-- <i class="nav-hdr-btn ti-calendar" style="color: gray"></i> -->
+              <input class="daterangepicker-field top_datepicker" />
+            </li>
+            <!-- #END# Full Screen Button -->
+            <li class="fullscreen">
+              <form class="form-header" action="" method="POST">
+                <input
+                  class="au-input au-input--xl"
+                  style="min-width: 20%;"
+                  type="text"
+                  name="search"
+                  placeholder="Search"
+                />
+                <button class="au-btn--submit" type="submit">
+                  <i class="fa fa-search" style="color: gray;"></i>
+                </button>
+              </form>
+            </li>
+            <li class="fullscreen" style="padding: 4px;">
               <ul class="list-unstyled order-list">
                 <li class="avatar avatar-sm">
                   <img
@@ -184,65 +223,28 @@
                 </li>
               </ul>
             </li>
-            <li class="fullscreen">
-              <form class="form-header" action="" method="POST">
-                <input
-                  class="au-input au-input--xl"
-                  style="min-width: 20%;"
-                  type="text"
-                  name="search"
-                  placeholder="Search"
-                />
-                <button class="au-btn--submit" type="submit">
-                  <i class="fa fa-search" style="color: gray;"></i>
-                </button>
-              </form>
-            </li>
-            <li class="fullscreen">
-              <!-- <i class="nav-hdr-btn ti-calendar" style="color: gray"></i> -->
-              <input class="daterangepicker-field top_datepicker" />
-            </li>
-            <!-- #END# Full Screen Button -->
-            <!-- #START# Notifications-->
-            <li class="dropdown">
-              <a
-                href="#"
-                onClick="return false;"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-              >
-                <i class="nav-hdr-btn ti-bell" style="color: gray;"></i>
-                <span class="notify"></span>
-                <span class="heartbeat"></span>
-              </a>
-            </li>
-            <li class="dropdown">
-              <a
-                href="#"
-                onClick="return false;"
-                data-toggle="modal"
-                data-target="#settings"
-                role="button"
-              >
-                <i class="nav-hdr-btn ti-settings" style="color: gray;"></i>
-                <span class="notify"></span>
-                <span class="heartbeat"></span>
-              </a>
-            </li>
-            <!-- #END# Notifications-->
-            <li class="">
-              <a
-                href="#"
-                onclick="return false;"
-                class="dropdown-toggle js-right-sidebar"
-                data-close="true"
-              >
-                <!-- <img src="../../assets/images/user.jpg" alt="user"> -->
-                <i class="fas fa-user-circle"></i>
-              </a>
-            </li>
           </ul>
+        </div>
+        <div class="navbar-header navbar-right">
+          <a
+            href="#"
+            onClick="return false;"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar-collapse"
+            aria-expanded="false"
+          ></a>
+          <a href="#" onClick="return false;" class="bars"></a>
+          <a href="#" onClick="return false;" class="bar_nav sidemenu-collapse"
+            ><i class="nav-hdr-btn ti-menu" style="color: #000;"></i
+          ></a>
+          <a class="navbar-brand nav_float" href="#">
+            <img
+              src="../../assets/images/Startroom_Final logo-01_1.png"
+              alt=""
+            />
+            <!-- <span class="logo-name">Img</span> -->
+          </a>
         </div>
       </div>
     </nav>
@@ -404,11 +406,8 @@
     <section class="content">
       <!-- Page Header -->
       <div class="page-header row no-gutters py-2 m-t--70">
-        <div class="col-lg-6 col-md-6 text-center text-sm-left pt-2 mb-0 ml-4">
-          <h5
-            class="page-title"
-            style="font-weight: 600; text-transform: uppercase;"
-          >
+        <div class="col-lg-12 col-md-12 pt-2 mb-0 mr-4">
+          <h5 class="page-title">
             Strategy Map
           </h5>
         </div>
@@ -541,11 +540,13 @@
                     class="btn btn-light btn-sm"
                     id="roce_plus"
                     style="
-                      height: 25px;
+                      height: 18px;
                       margin-left: 5px;
-                      padding-top: 4px;
+                      padding-top: 1px !important;
                       color: #4c5058;
-                      border-radius: 14px;
+                      float: right;
+                      border-radius: 25px;
+                      padding: 3px;
                     "
                   >
                     <i class="fas fa-plus" style="font-size: 12px;"></i>
@@ -554,11 +555,13 @@
                     class="btn btn-light btn-sm"
                     id="roce_minus"
                     style="
-                      height: 25px;
+                      height: 18px;
                       margin-left: 5px;
-                      padding-top: 4px;
+                      padding-top: 1px !important;
                       color: #4c5058;
-                      border-radius: 14px;
+                      float: right;
+                      border-radius: 25px;
+                      padding: 3px;
                     "
                   >
                     <i class="fas fa-minus" style="font-size: 12px;"></i>
@@ -571,29 +574,31 @@
                   class="btn btn-light btn-sm"
                   id="plus"
                   style="
-                    height: 28px;
+                    height: 18px;
                     margin-left: 5px;
-                    padding-top: 6px;
+                    padding-top: 1px !important;
                     color: #4c5058;
                     border-radius: 25px;
                     float: right;
+                    padding: 3px;
                   "
                 >
-                  <i class="fas fa-plus" style="font-size: 14px;"></i>
+                  <i class="fas fa-plus" style="font-size: 12px;"></i>
                 </button>
                 <button
                   class="btn btn-light btn-sm"
                   id="minus"
                   style="
-                    height: 28px;
+                    height: 18px;
                     margin-left: 5px;
-                    padding-top: 6px;
+                    padding-top: 1px !important;
                     color: #4c5058;
                     border-radius: 25px;
                     float: right;
+                    padding: 3px;
                   "
                 >
-                  <i class="fas fa-minus" style="font-size: 14px;"></i>
+                  <i class="fas fa-minus" style="font-size: 12px;"></i>
                 </button>
               </div>
             </div>
@@ -603,9 +608,9 @@
 
         <button
           type="button"
-          class="stMapAdd"
+          class="stMapAdd pull-right"
           id="add_button"
-          style="margin-left: 2%; font-weight: 600;"
+          style="margin-right: 2%; font-weight: 600;"
         >
           Add Card
         </button>
@@ -752,11 +757,13 @@
                     class="btn btn-light btn-sm"
                     id="roce_plus"
                     style="
-                      height: 25px;
-                      margin-left: 5px;
-                      padding-top: 4px;
-                      color: #4c5058;
-                      border-radius: 14px;
+                    height: 18px;
+                    margin-left: 5px;
+                    padding-top: 1px !IMPORTANT;
+                    color: #4c5058;
+                    float: right;
+                    border-radius: 25px;
+                    padding: 3px;
                     "
                   >
                     <i class="fas fa-plus" style="font-size: 12px;"></i>
@@ -765,11 +772,13 @@
                     class="btn btn-light btn-sm"
                     id="roce_minus"
                     style="
-                      height: 25px;
-                      margin-left: 5px;
-                      padding-top: 4px;
-                      color: #4c5058;
-                      border-radius: 14px;
+                    height: 18px;
+                    margin-left: 5px;
+                    padding-top: 1px !IMPORTANT;
+                    color: #4c5058;
+                    float: right;
+                    border-radius: 25px;
+                    padding: 3px;
                     "
                   >
                     <i class="fas fa-minus" style="font-size: 12px;"></i>
@@ -782,43 +791,46 @@
                   class="btn btn-light btn-sm"
                   id="plus"
                   style="
-                    height: 28px;
-                    margin-left: 5px;
-                    padding-top: 6px;
-                    color: #4c5058;
-                    border-radius: 25px;
-                    float: right;
+                  height: 18px;
+                  margin-left: 5px;
+                  padding-top: 1px !IMPORTANT;
+                  color: #4c5058;
+                  border-radius: 25px;
+                  float: right;
+                  padding: 3px;
                   "
                 >
-                  <i class="fas fa-plus" style="font-size: 14px;"></i>
+                  <i class="fas fa-plus" style="font-size: 12px;"></i>
                 </button>
                 <button
                   class="btn btn-light btn-sm"
                   id="minus"
                   style="
-                    height: 28px;
-                    margin-left: 5px;
-                    padding-top: 6px;
-                    color: #4c5058;
-                    border-radius: 25px;
-                    float: right;
+                  height: 18px;
+                  margin-left: 5px;
+                  padding-top: 1px !IMPORTANT;
+                  color: #4c5058;
+                  border-radius: 25px;
+                  float: right;
+                  padding: 3px;
                   "
                 >
-                  <i class="fas fa-minus" style="font-size: 14px;"></i>
+                  <i class="fas fa-minus" style="font-size: 12px;"></i>
                 </button>
                 <button
                   class="btn btn-light btn-sm"
                   id='remove_button'
                   style="
-                    height: 28px;
-                    margin-left: 5px;
-                    padding-top: 6px;
-                    color: #4c5058;
-                    border-radius: 25px;
-                    float: right;
+                  height: 18px;
+                  margin-left: 5px;
+                  padding-top: 1px !IMPORTANT;
+                  color: #4c5058;
+                  border-radius: 25px;
+                  float: right;
+                  padding: 3px;
                   "
                 >
-                <i class="fas fa-times" style="font-size: 14px;"></i>
+                <i class="fas fa-times" style="font-size: 12px;"></i>
                 </button>
               </div>
             </div>
@@ -893,11 +905,13 @@
                     class="btn btn-light btn-sm"
                     id="roce_plus"
                     style="
-                      height: 25px;
-                      margin-left: 5px;
-                      padding-top: 4px;
-                      color: #4c5058;
-                      border-radius: 14px;
+                    height: 18px;
+                    margin-left: 5px;
+                    padding-top: 1px !IMPORTANT;
+                    color: #4c5058;
+                    float: right;
+                    border-radius: 25px;
+                    padding: 3px;
                     "
                   >
                     <i class="fas fa-plus" style="font-size: 12px;"></i>
@@ -906,11 +920,13 @@
                     class="btn btn-light btn-sm"
                     id="roce_minus"
                     style="
-                      height: 25px;
-                      margin-left: 5px;
-                      padding-top: 4px;
-                      color: #4c5058;
-                      border-radius: 14px;
+                    height: 18px;
+                    margin-left: 5px;
+                    padding-top: 1px !IMPORTANT;
+                    color: #4c5058;
+                    float: right;
+                    border-radius: 25px;
+                    padding: 3px;
                     "
                   >
                     <i class="fas fa-minus" style="font-size: 12px;"></i>

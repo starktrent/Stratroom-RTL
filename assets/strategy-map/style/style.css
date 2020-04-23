@@ -86,7 +86,7 @@ ol {
   position: relative;
   padding-left: 20px;
 }
-.stMapHead:before {
+/* .stMapHead:before {
   content: "";
   width: 1px;
   height: 33px;
@@ -94,7 +94,7 @@ ol {
   background-color: var(--light);
   left: 0;
   top: 4px;
-}
+} */
 .stMapHeader {
   padding: 20px 0;
   color: var(--white);
